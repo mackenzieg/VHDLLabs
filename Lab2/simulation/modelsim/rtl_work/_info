@@ -7,38 +7,38 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dN:/ECE-124/Lab2/simulation/modelsim
-Elogicalstep_lab2_top
-Z1 w1495722798
+Z0 dN:/VHDL/Lab2/simulation/modelsim
+Eadder_8bit
+Z1 w1496511711
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z5 8N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd
-Z6 FN:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd
+Z5 8N:/VHDL/Lab2/adder_8bit.vhd
+Z6 FN:/VHDL/Lab2/adder_8bit.vhd
 l0
 L6
-VVBeS>PiBRA8AO8mUdnjI^3
-!s100 2?ZWgG17Ni^=iY5Z4NB?h0
+V]O[3<okf>d;z;A1S[1PO@2
+!s100 flm;b^WfoFfj5?GM?J>g^3
 Z7 OV;C;10.4b;61
 31
-Z8 !s110 1495723026
+Z8 !s110 1496512298
 !i10b 1
-Z9 !s108 1495723026.000000
-Z10 !s90 -reportprogress|300|-93|-work|work|N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd|
-Z11 !s107 N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd|
+Z9 !s108 1496512298.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|N:/VHDL/Lab2/adder_8bit.vhd|
+Z11 !s107 N:/VHDL/Lab2/adder_8bit.vhd|
 !i113 1
 Z12 o-93 -work work
 Z13 tExplicit 1
-Asimplecircuit
+Aadder_8bit
 R2
 R3
 R4
-DEx4 work 20 logicalstep_lab2_top 0 22 VBeS>PiBRA8AO8mUdnjI^3
-l39
-L18
-V[@A[i<kFZo8XZci]j[]Zb3
-!s100 CM>hFC>4B7Fl9AjOP1I:91
+DEx4 work 10 adder_8bit 0 22 ]O[3<okf>d;z;A1S[1PO@2
+l19
+L14
+V9E9T=O:l`?I_U`8=?0LP@0
+!s100 l8V07MHL:lhPcZ[Q^eH@c1
 R7
 31
 R8
@@ -49,25 +49,88 @@ R11
 !i113 1
 R12
 R13
-Esevensegment
-Z14 w1492630134
+Elogicalstep_lab2_top
+w1496511563
 R2
 R3
 R4
 R0
-Z15 8N:/ECE-124/Lab2/SevenSegment.vhd
-Z16 FN:/ECE-124/Lab2/SevenSegment.vhd
+8N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd
+FN:/VHDL/Lab2/LogicalStep_Lab2_top.vhd
+l0
+L6
+VVBeS>PiBRA8AO8mUdnjI^3
+!s100 2?ZWgG17Ni^=iY5Z4NB?h0
+R7
+31
+Z14 !s110 1496512300
+!i10b 1
+!s108 1496512300.000000
+!s90 -reportprogress|300|-93|-work|work|N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd|
+!s107 N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd|
+!i113 1
+R12
+R13
+Esegment7_mux
+Z15 w1496507801
+R2
+R3
+R4
+R0
+Z16 8N:/VHDL/Lab2/segment7_mux.vhd
+Z17 FN:/VHDL/Lab2/segment7_mux.vhd
+l0
+L52
+VSjdkHh64gHFmPGf:E2C3j3
+!s100 <9hNY[@UcmBTcjH?JCU<R2
+R7
+31
+R14
+!i10b 1
+Z18 !s108 1496512299.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|N:/VHDL/Lab2/segment7_mux.vhd|
+Z20 !s107 N:/VHDL/Lab2/segment7_mux.vhd|
+!i113 1
+R12
+R13
+Asyn
+R2
+R3
+R4
+DEx4 work 12 segment7_mux 0 22 SjdkHh64gHFmPGf:E2C3j3
+l72
+L67
+VAWTbSo;8GaA`:C2FDifMC3
+!s100 NdfK35Am56JD=jz7`>OAZ1
+R7
+31
+R14
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Esevensegment
+Z21 w1496505582
+R2
+R3
+R4
+R0
+Z22 8N:/VHDL/Lab2/SevenSegment.vhd
+Z23 FN:/VHDL/Lab2/SevenSegment.vhd
 l0
 L10
 VIcE=JoX9k?e0S7Q]iSiUh2
 !s100 04IXS8z>2XE3`KedF`LM>0
 R7
 31
-R8
+Z24 !s110 1496512299
 !i10b 1
 R9
-Z17 !s90 -reportprogress|300|-93|-work|work|N:/ECE-124/Lab2/SevenSegment.vhd|
-Z18 !s107 N:/ECE-124/Lab2/SevenSegment.vhd|
+Z25 !s90 -reportprogress|300|-93|-work|work|N:/VHDL/Lab2/SevenSegment.vhd|
+Z26 !s107 N:/VHDL/Lab2/SevenSegment.vhd|
 !i113 1
 R12
 R13
@@ -78,15 +141,56 @@ R4
 DEx4 work 12 sevensegment 0 22 IcE=JoX9k?e0S7Q]iSiUh2
 l24
 L18
-V7PV0oZHO^`Mzi1<P6ZK8W1
-!s100 QB@5X]ZofSPY;mZ6iEm:]3
+VnAlL>m4=e4d_mEeEX>3DC3
+!s100 HQnL4dY3GB2@QV[PE@4]_1
+R7
+31
+R24
+!i10b 1
+R9
+R25
+R26
+!i113 1
+R12
+R13
+Etwo_one_mux
+Z27 w1496511200
+R2
+R3
+R4
+R0
+Z28 8N:/VHDL/Lab2/two_one_mux.vhd
+Z29 FN:/VHDL/Lab2/two_one_mux.vhd
+l0
+L6
+V1F1gaaE62<DO;]60]ADh;3
+!s100 7hFfn1dgeHz2HBm>K24d[3
 R7
 31
 R8
 !i10b 1
 R9
-R17
-R18
+Z30 !s90 -reportprogress|300|-93|-work|work|N:/VHDL/Lab2/two_one_mux.vhd|
+Z31 !s107 N:/VHDL/Lab2/two_one_mux.vhd|
+!i113 1
+R12
+R13
+Atwo_one_mux
+R2
+R3
+R4
+DEx4 work 11 two_one_mux 0 22 1F1gaaE62<DO;]60]ADh;3
+l15
+L15
+V@?CTJL[b;bW[z2P8K9CjG1
+!s100 HlmU?cP8Z[Z8=;CGTOCGW0
+R7
+31
+R8
+!i10b 1
+R9
+R30
+R31
 !i113 1
 R12
 R13
