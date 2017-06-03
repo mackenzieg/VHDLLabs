@@ -1,5 +1,5 @@
 Fitter report for LogicalStep_Lab2_top
-Sat Jun 03 13:19:31 2017
+Sat Jun 03 13:34:33 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -67,7 +67,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sat Jun 03 13:19:31 2017           ;
+; Fitter Status                      ; Successful - Sat Jun 03 13:34:33 2017           ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
 ; Revision Name                      ; LogicalStep_Lab2_top                            ;
 ; Top-level Entity Name              ; LogicalStep_Lab2_top                            ;
@@ -733,7 +733,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; |LogicalStep_Lab2_top       ; 65 (1)      ; 11 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 30   ; 0            ; 54 (1)       ; 0 (0)             ; 11 (0)           ; 0          ; |LogicalStep_Lab2_top                        ; work         ;
 ;    |SevenSegment:INST1|     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|SevenSegment:INST1     ; work         ;
 ;    |SevenSegment:INST2|     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|SevenSegment:INST2     ; work         ;
-;    |adder_4bit:INST6|       ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|adder_4bit:INST6       ; work         ;
+;    |adder_8bit:INST6|       ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|adder_8bit:INST6       ; work         ;
 ;    |logic_proccessor:INST7| ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|logic_proccessor:INST7 ; work         ;
 ;    |segment7_mux:INST3|     ; 18 (18)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 11 (11)          ; 0          ; |LogicalStep_Lab2_top|segment7_mux:INST3     ; work         ;
 ;    |two_one_mux:INST4|      ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|two_one_mux:INST4      ; work         ;
@@ -786,11 +786,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                  ; Pad To Core Index ; Setting ;
 +--------------------------------------+-------------------+---------+
 ; sw[4]                                ;                   ;         ;
-;      - adder_4bit:INST6|Add0~0       ; 0                 ; 6       ;
+;      - adder_8bit:INST6|Add0~0       ; 0                 ; 6       ;
 ;      - logic_proccessor:INST7|Mux3~0 ; 0                 ; 6       ;
 ;      - two_one_mux:INST4|dout[4]~4   ; 0                 ; 6       ;
 ; sw[0]                                ;                   ;         ;
-;      - adder_4bit:INST6|Add0~0       ; 0                 ; 6       ;
+;      - adder_8bit:INST6|Add0~0       ; 0                 ; 6       ;
 ;      - logic_proccessor:INST7|Mux3~0 ; 0                 ; 6       ;
 ;      - two_one_mux:INST4|dout[0]~0   ; 0                 ; 6       ;
 ; pb[3]                                ;                   ;         ;
@@ -834,32 +834,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - two_one_mux:INST5|dout[2]~5   ; 0                 ; 6       ;
 ;      - two_one_mux:INST5|dout[3]~7   ; 0                 ; 6       ;
 ; sw[1]                                ;                   ;         ;
-;      - adder_4bit:INST6|Add0~2       ; 1                 ; 6       ;
+;      - adder_8bit:INST6|Add0~2       ; 1                 ; 6       ;
 ;      - two_one_mux:INST5|dout[1]~2   ; 1                 ; 6       ;
 ;      - two_one_mux:INST4|dout[1]~1   ; 1                 ; 6       ;
 ;      - two_one_mux:INST5|dout[1]~14  ; 1                 ; 6       ;
 ; sw[5]                                ;                   ;         ;
-;      - adder_4bit:INST6|Add0~2       ; 0                 ; 6       ;
+;      - adder_8bit:INST6|Add0~2       ; 0                 ; 6       ;
 ;      - two_one_mux:INST5|dout[1]~2   ; 0                 ; 6       ;
 ;      - two_one_mux:INST4|dout[5]~5   ; 0                 ; 6       ;
 ;      - two_one_mux:INST5|dout[1]~15  ; 0                 ; 6       ;
 ; sw[2]                                ;                   ;         ;
-;      - adder_4bit:INST6|Add0~4       ; 0                 ; 6       ;
+;      - adder_8bit:INST6|Add0~4       ; 0                 ; 6       ;
 ;      - two_one_mux:INST5|dout[2]~5   ; 0                 ; 6       ;
 ;      - two_one_mux:INST4|dout[2]~2   ; 0                 ; 6       ;
 ;      - two_one_mux:INST5|dout[2]~12  ; 0                 ; 6       ;
 ; sw[6]                                ;                   ;         ;
-;      - adder_4bit:INST6|Add0~4       ; 0                 ; 6       ;
+;      - adder_8bit:INST6|Add0~4       ; 0                 ; 6       ;
 ;      - two_one_mux:INST5|dout[2]~5   ; 0                 ; 6       ;
 ;      - two_one_mux:INST4|dout[6]~6   ; 0                 ; 6       ;
 ;      - two_one_mux:INST5|dout[2]~13  ; 0                 ; 6       ;
 ; sw[3]                                ;                   ;         ;
-;      - adder_4bit:INST6|Add0~6       ; 0                 ; 6       ;
+;      - adder_8bit:INST6|Add0~6       ; 0                 ; 6       ;
 ;      - two_one_mux:INST5|dout[3]~7   ; 0                 ; 6       ;
 ;      - two_one_mux:INST4|dout[3]~3   ; 0                 ; 6       ;
 ;      - two_one_mux:INST5|dout[3]~10  ; 0                 ; 6       ;
 ; sw[7]                                ;                   ;         ;
-;      - adder_4bit:INST6|Add0~6       ; 1                 ; 6       ;
+;      - adder_8bit:INST6|Add0~6       ; 1                 ; 6       ;
 ;      - two_one_mux:INST5|dout[3]~7   ; 1                 ; 6       ;
 ;      - two_one_mux:INST4|dout[7]~7   ; 1                 ; 6       ;
 ;      - two_one_mux:INST5|dout[3]~11  ; 1                 ; 6       ;
@@ -1298,9 +1298,9 @@ Warning (14579): Pin sw[3] uses I/O standard 3.3-V LVCMOS located at 11 will hav
 Warning (14579): Pin sw[7] uses I/O standard 3.3-V LVCMOS located at 141 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Info (144001): Generated suppressed messages file N:/VHDL/Lab2/output_files/LogicalStep_Lab2_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 90 warnings
-    Info: Peak virtual memory: 1448 megabytes
-    Info: Processing ended: Sat Jun 03 13:19:33 2017
-    Info: Elapsed time: 00:00:18
+    Info: Peak virtual memory: 1449 megabytes
+    Info: Processing ended: Sat Jun 03 13:34:36 2017
+    Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:15
 
 

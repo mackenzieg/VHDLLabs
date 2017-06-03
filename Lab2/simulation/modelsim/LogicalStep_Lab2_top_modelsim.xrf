@@ -1,10 +1,10 @@
 vendor_name = ModelSim
+source_file = 1, N:/VHDL/Lab2/adder_8bit.vhd
 source_file = 1, N:/VHDL/Lab2/two_one_mux.vhd
 source_file = 1, N:/VHDL/Lab2/SevenSegment.vhd
 source_file = 1, N:/VHDL/Lab2/segment7_mux.vhd
 source_file = 1, N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd
 source_file = 1, N:/VHDL/Lab2/logic_proccessor.vhd
-source_file = 1, N:/VHDL/Lab2/adder_4bit.vhd
 source_file = 1, N:/VHDL/Lab2/LogicalStep_Lab2.tcl
 source_file = 1, output_files/Chain1.cdf
 source_file = 1, output_files/Chain2.cdf

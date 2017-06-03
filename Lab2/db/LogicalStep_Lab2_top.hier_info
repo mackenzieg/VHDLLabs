@@ -6,28 +6,28 @@ pb[2] => logic_proccessor:INST7.push_B[2]
 pb[3] => two_one_mux:INST5.toggle
 pb[3] => two_one_mux:INST4.toggle
 sw[0] => two_one_mux:INST4.in_1[0]
-sw[0] => adder_4bit:INST6.in_2[0]
+sw[0] => adder_8bit:INST6.in_2[0]
 sw[0] => logic_proccessor:INST7.hex_B[0]
 sw[1] => two_one_mux:INST4.in_1[1]
-sw[1] => adder_4bit:INST6.in_2[1]
+sw[1] => adder_8bit:INST6.in_2[1]
 sw[1] => logic_proccessor:INST7.hex_B[1]
 sw[2] => two_one_mux:INST4.in_1[2]
-sw[2] => adder_4bit:INST6.in_2[2]
+sw[2] => adder_8bit:INST6.in_2[2]
 sw[2] => logic_proccessor:INST7.hex_B[2]
 sw[3] => two_one_mux:INST4.in_1[3]
-sw[3] => adder_4bit:INST6.in_2[3]
+sw[3] => adder_8bit:INST6.in_2[3]
 sw[3] => logic_proccessor:INST7.hex_B[3]
 sw[4] => two_one_mux:INST4.in_1[4]
-sw[4] => adder_4bit:INST6.in_1[0]
+sw[4] => adder_8bit:INST6.in_1[0]
 sw[4] => logic_proccessor:INST7.hex_A[0]
 sw[5] => two_one_mux:INST4.in_1[5]
-sw[5] => adder_4bit:INST6.in_1[1]
+sw[5] => adder_8bit:INST6.in_1[1]
 sw[5] => logic_proccessor:INST7.hex_A[1]
 sw[6] => two_one_mux:INST4.in_1[6]
-sw[6] => adder_4bit:INST6.in_1[2]
+sw[6] => adder_8bit:INST6.in_1[2]
 sw[6] => logic_proccessor:INST7.hex_A[2]
 sw[7] => two_one_mux:INST4.in_1[7]
-sw[7] => adder_4bit:INST6.in_1[3]
+sw[7] => adder_8bit:INST6.in_1[3]
 sw[7] => logic_proccessor:INST7.hex_A[3]
 leds[0] << two_one_mux:INST5.dout[0]
 leds[1] << two_one_mux:INST5.dout[1]
@@ -231,7 +231,7 @@ dout[6] <= dout.DB_MAX_OUTPUT_PORT_TYPE
 dout[7] <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab2_top|adder_4bit:INST6
+|LogicalStep_Lab2_top|adder_8bit:INST6
 in_1[0] => Add0.IN12
 in_1[1] => Add0.IN11
 in_1[2] => Add0.IN10

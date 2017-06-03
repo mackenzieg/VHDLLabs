@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition"
 
--- DATE "06/03/2017 13:20:20"
+-- DATE "06/03/2017 13:35:26"
 
 -- 
 -- Device: Altera 10M08SAE144C8G Package EQFP144
