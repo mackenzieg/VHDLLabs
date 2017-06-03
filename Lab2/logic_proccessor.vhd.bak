@@ -4,14 +4,18 @@ use IEEE.numeric_std.all;
 
 entity logic_covfefe_proccessor is
    port (
-			 hex_A 		: in  std_logic_vector(3 downto 0);	
-			 hex_B		: in  std_logic_vector(3 downto 0);
-			 push_B		: in  std_logic_vector(2 downto 0);
-			 logic_out 	: out  std_logic_vector(3 downto 0)
+			 in_1 		: in  std_logic_vector(3 downto 0);	
+			 in_2 		: in  std_logic_vector(3 downto 0);
+			 add 			: out  std_logic_vector(7 downto 0)
         );
 end entity logic_covfefe_proccessor;
 
-architecture logic_covfefe_proccessor of logic_covfefe_proccessor is begin
+architecture logic_covfefe_proccessor of logic_covfefe_proccessor is
+	
+	signal a : unsigned(7 downto 0);
+	signal b : unsigned(7 downto 0);
+   
+begin
 	a <= "0000" & unsigned(in_1);
 	b <= "0000" & unsigned(in_2);
 	add <= std_logic_vector(a + b);

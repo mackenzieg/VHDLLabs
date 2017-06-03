@@ -35,7 +35,7 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
    ); 
    end component;
 	
-	component eight_to_two_mux port (
+	component two_one_mux port (
 				 toggle 		: in  std_logic;
 				 in_1 		: in  std_logic_vector(7 downto 0);	
 				 in_2 		: in  std_logic_vector(7 downto 0);
@@ -43,10 +43,18 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 			  );
 	end component;
 	
-	component four_bit_adder port (
+	component adder_4bit port (
 			 in_1 		: in  std_logic_vector(3 downto 0);	
 			 in_2 		: in  std_logic_vector(3 downto 0);
 			 add 			: out  std_logic_vector(7 downto 0)
+        );
+	end component;
+	
+	component logic_proccessor port (
+			 hex_A 		: in  std_logic_vector(3 downto 0);	
+			 hex_B		: in  std_logic_vector(3 downto 0);
+			 push_B		: in  std_logic_vector(2 downto 0);
+			 logic_out 	: out  std_logic_vector(3 downto 0)
         );
 	end component;
 	
@@ -54,16 +62,17 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 --
 --  std_logic_vector is a signal which can be used for logic operations such as OR, AND, NOT, XOR
 --
-	signal add_1		: std_logic_vector(3 downto 0);
-	signal add_2		: std_logic_vector(3 downto 0);
+
 	signal seg7_A		: std_logic_vector(6 downto 0);
    signal seg7_B		: std_logic_vector(6 downto 0);
+	
 	signal hex_A		: std_logic_vector(3 downto 0);
 	signal hex_B		: std_logic_vector(3 downto 0);
 	
 	signal seg_bus 	: std_logic_vector(7 downto 0);
-	
 	signal sum_bus 	: std_logic_vector(7 downto 0);
+	
+	signal logic_bus 	: std_logic_vector(3 downto 0);
 	
 	
 -- Here the circuit begins
@@ -77,10 +86,13 @@ begin
 	
    INST3: segment7_mux port map (clkin_50, seg7_A, seg7_B, seg7_data, seg7_char2, seg7_char1);
 	
-	INST4: eight_to_two_mux port map (not pb(3), hex_A & hex_B, sum_bus, seg_bus);
+	INST4: two_one_mux port map (not pb(3), hex_A & hex_B, sum_bus, seg_bus);
 	
-	INST5: four_bit_adder port map (hex_A, hex_B, sum_bus);
-   
+	INST5: two_one_mux port map (pb(3), sum_bus, "0000" & logic_bus, leds);
+	
+	INST6: adder_4bit port map (hex_A, hex_B, sum_bus);
+	
+	INST7: logic_proccessor port map (hex_A, hex_B, (not pb(2 downto 0)), logic_bus);
  
 end SimpleCircuit;
 

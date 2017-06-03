@@ -1,16 +1,16 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-entity logic_covfefe_proccessor is
+entity adder_4bit is
    port (
 			 in_1 		: in  std_logic_vector(3 downto 0);	
 			 in_2 		: in  std_logic_vector(3 downto 0);
 			 add 			: out  std_logic_vector(7 downto 0)
         );
-end entity logic_covfefe_proccessor;
+end entity adder_4bit;
 
-architecture logic_covfefe_proccessor of logic_covfefe_proccessor is
+architecture adder_4bit of adder_4bit is
 	
 	signal a : unsigned(7 downto 0);
 	signal b : unsigned(7 downto 0);
@@ -19,4 +19,4 @@ begin
 	a <= "0000" & unsigned(in_1);
 	b <= "0000" & unsigned(in_2);
 	add <= std_logic_vector(a + b);
-end architecture logic_covfefe_proccessor;
+end architecture adder_4bit;
