@@ -9,44 +9,44 @@ z2
 cModel Technology
 dN:/ECE-124/Lab2/simulation/qsim
 vLogicalStep_Lab2_top
-Z0 !s110 1496513963
+!s110 1496682819
 !i10b 1
-!s100 D?kBkNd?^i=VbN^`g3k482
-Iclgi>oLTNE:4]ojMN]6:c1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dN:/VHDL/Lab2/simulation/qsim
-w1496513961
+!s100 CaVM701HTO?ThKOD6`NO23
+ImcDg5M@^d;ajeoLEfE[K92
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dN:/ECE-124/VHDL/Lab2/simulation/qsim
+w1496682817
 8LogicalStep_Lab2_top.vo
 FLogicalStep_Lab2_top.vo
 L0 32
-Z3 OV;L;10.4b;61
+Z2 OV;L;10.4b;61
 r1
 !s85 0
 31
-Z4 !s108 1496513963.000000
+Z3 !s108 1496682819.000000
 !s107 LogicalStep_Lab2_top.vo|
 !s90 -work|work|LogicalStep_Lab2_top.vo|
 !i113 1
-Z5 o-work work
+Z4 o-work work
 n@logical@step_@lab2_top
 vLogicalStep_Lab2_top_vlg_vec_tst
-R0
+!s110 1496682821
 !i10b 1
-!s100 lM1P>BcA0?kVX@06E]9mX2
-Imz0NABZ?WD^DB8S0RQ:4e0
+!s100 _F>A;BGhAYTf97<eo4n[22
+IQLKW0i?=[GNoUJ:9[7z2n2
+R0
 R1
-R2
-w1496513953
-8LogicWaveform.vwf.vt
-FLogicWaveform.vwf.vt
+w1496682808
+8Waveform.vwf.vt
+FWaveform.vwf.vt
 L0 30
-R3
+R2
 r1
 !s85 0
 31
-R4
-!s107 LogicWaveform.vwf.vt|
-!s90 -work|work|LogicWaveform.vwf.vt|
+R3
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
 !i113 1
-R5
+R4
 n@logical@step_@lab2_top_vlg_vec_tst

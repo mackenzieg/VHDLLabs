@@ -24,6 +24,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[7]",
+					"strict" : false
+				},
+				{
 					"name" : "seg7_data[0]",
 					"strict" : false
 				},
@@ -68,7 +80,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "pb[3]",
+					"name" : "pb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pb[1]",
 					"strict" : false
 				},
 				{
@@ -76,11 +92,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "pb[0]",
-					"strict" : false
-				},
-				{
-					"name" : "pb[1]",
+					"name" : "pb[3]",
 					"strict" : false
 				},
 				{
@@ -100,11 +112,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw[3]",
+					"name" : "sw[7]",
 					"strict" : false
 				},
 				{
-					"name" : "sw[7]",
+					"name" : "sw[3]",
 					"strict" : false
 				},
 				{

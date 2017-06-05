@@ -1,5 +1,5 @@
 Fitter report for LogicalStep_Lab2_top
-Sat Jun 03 13:34:33 2017
+Mon Jun 05 12:37:38 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -67,15 +67,15 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sat Jun 03 13:34:33 2017           ;
+; Fitter Status                      ; Successful - Mon Jun 05 12:37:38 2017           ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
 ; Revision Name                      ; LogicalStep_Lab2_top                            ;
 ; Top-level Entity Name              ; LogicalStep_Lab2_top                            ;
 ; Family                             ; MAX 10                                          ;
 ; Device                             ; 10M08SAE144C8G                                  ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 65 / 8,064 ( < 1 % )                            ;
-;     Total combinational functions  ; 65 / 8,064 ( < 1 % )                            ;
+; Total logic elements               ; 68 / 8,064 ( < 1 % )                            ;
+;     Total combinational functions  ; 68 / 8,064 ( < 1 % )                            ;
 ;     Dedicated logic registers      ; 11 / 8,064 ( < 1 % )                            ;
 ; Total registers                    ; 11                                              ;
 ; Total pins                         ; 30 / 101 ( 30 % )                               ;
@@ -331,8 +331,8 @@ agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 147 ) ; 0.00 % ( 0 / 147 )         ; 0.00 % ( 0 / 147 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 147 ) ; 0.00 % ( 0 / 147 )         ; 0.00 % ( 0 / 147 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 150 ) ; 0.00 % ( 0 / 150 )         ; 0.00 % ( 0 / 150 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 150 ) ; 0.00 % ( 0 / 150 )         ; 0.00 % ( 0 / 150 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -355,7 +355,7 @@ agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 139 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 142 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 8 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -363,7 +363,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in N:/VHDL/Lab2/output_files/LogicalStep_Lab2_top.pin.
+The pin-out file can be found in N:/ECE-124/VHDL/Lab2/output_files/LogicalStep_Lab2_top.pin.
 
 
 +--------------------------------------------------------------------+
@@ -371,26 +371,26 @@ The pin-out file can be found in N:/VHDL/Lab2/output_files/LogicalStep_Lab2_top.
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 65 / 8,064 ( < 1 % ) ;
-;     -- Combinational with no register       ; 54                   ;
+; Total logic elements                        ; 68 / 8,064 ( < 1 % ) ;
+;     -- Combinational with no register       ; 57                   ;
 ;     -- Register only                        ; 0                    ;
 ;     -- Combinational with a register        ; 11                   ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 30                   ;
-;     -- 3 input functions                    ; 18                   ;
-;     -- <=2 input functions                  ; 17                   ;
+;     -- 4 input functions                    ; 35                   ;
+;     -- 3 input functions                    ; 19                   ;
+;     -- <=2 input functions                  ; 14                   ;
 ;     -- Register only                        ; 0                    ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 52                   ;
+;     -- normal mode                          ; 55                   ;
 ;     -- arithmetic mode                      ; 13                   ;
 ;                                             ;                      ;
 ; Total registers*                            ; 11 / 8,542 ( < 1 % ) ;
 ;     -- Dedicated logic registers            ; 11 / 8,064 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 478 ( 0 % )      ;
 ;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 5 / 504 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 6 / 504 ( 1 % )      ;
 ; Virtual pins                                ; 0                    ;
 ; I/O pins                                    ; 30 / 101 ( 30 % )    ;
 ;     -- Clock pins                           ; 2 / 4 ( 50 % )       ;
@@ -410,11 +410,11 @@ The pin-out file can be found in N:/VHDL/Lab2/output_files/LogicalStep_Lab2_top.
 ; Remote update blocks                        ; 0 / 1 ( 0 % )        ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0.3% / 0.2% / 0.4%   ;
-; Peak interconnect usage (total/H/V)         ; 0.6% / 0.5% / 0.9%   ;
-; Maximum fan-out                             ; 13                   ;
-; Highest non-global fan-out                  ; 13                   ;
-; Total fan-out                               ; 275                  ;
-; Average fan-out                             ; 1.87                 ;
+; Peak interconnect usage (total/H/V)         ; 0.7% / 0.5% / 1.1%   ;
+; Maximum fan-out                             ; 16                   ;
+; Highest non-global fan-out                  ; 16                   ;
+; Total fan-out                               ; 295                  ;
+; Average fan-out                             ; 1.97                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -427,26 +427,26 @@ The pin-out file can be found in N:/VHDL/Lab2/output_files/LogicalStep_Lab2_top.
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 65 / 8064 ( < 1 % ) ; 0 / 8064 ( 0 % )               ;
-;     -- Combinational with no register       ; 54                  ; 0                              ;
+; Total logic elements                        ; 68 / 8064 ( < 1 % ) ; 0 / 8064 ( 0 % )               ;
+;     -- Combinational with no register       ; 57                  ; 0                              ;
 ;     -- Register only                        ; 0                   ; 0                              ;
 ;     -- Combinational with a register        ; 11                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 30                  ; 0                              ;
-;     -- 3 input functions                    ; 18                  ; 0                              ;
-;     -- <=2 input functions                  ; 17                  ; 0                              ;
+;     -- 4 input functions                    ; 35                  ; 0                              ;
+;     -- 3 input functions                    ; 19                  ; 0                              ;
+;     -- <=2 input functions                  ; 14                  ; 0                              ;
 ;     -- Register only                        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 52                  ; 0                              ;
+;     -- normal mode                          ; 55                  ; 0                              ;
 ;     -- arithmetic mode                      ; 13                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Total registers                             ; 11                  ; 0                              ;
 ;     -- Dedicated logic registers            ; 11 / 8064 ( < 1 % ) ; 0 / 8064 ( 0 % )               ;
 ;     -- I/O registers                        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 5 / 504 ( < 1 % )   ; 0 / 504 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 6 / 504 ( 1 % )     ; 0 / 504 ( 0 % )                ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
 ; I/O pins                                    ; 30                  ; 0                              ;
@@ -464,7 +464,7 @@ The pin-out file can be found in N:/VHDL/Lab2/output_files/LogicalStep_Lab2_top.
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 279                 ; 4                              ;
+;     -- Total Connections                    ; 299                 ; 4                              ;
 ;     -- Registered Connections               ; 21                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
@@ -498,10 +498,10 @@ The pin-out file can be found in N:/VHDL/Lab2/output_files/LogicalStep_Lab2_top.
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; clkin_50 ; 29    ; 2        ; 0            ; 6            ; 21           ; 11                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
-; pb[0]    ; 46    ; 3        ; 9            ; 0            ; 0            ; 12                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
-; pb[1]    ; 45    ; 3        ; 9            ; 0            ; 21           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
-; pb[2]    ; 44    ; 3        ; 9            ; 0            ; 28           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
-; pb[3]    ; 43    ; 3        ; 6            ; 0            ; 14           ; 13                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
+; pb[0]    ; 46    ; 3        ; 9            ; 0            ; 0            ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
+; pb[1]    ; 45    ; 3        ; 9            ; 0            ; 21           ; 9                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
+; pb[2]    ; 44    ; 3        ; 9            ; 0            ; 28           ; 6                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
+; pb[3]    ; 43    ; 3        ; 6            ; 0            ; 14           ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
 ; sw[0]    ; 30    ; 2        ; 0            ; 5            ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
 ; sw[1]    ; 13    ; 1A       ; 10           ; 19           ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
 ; sw[2]    ; 14    ; 1A       ; 10           ; 19           ; 21           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; 0         ;
@@ -725,20 +725,19 @@ The pin-out file can be found in N:/VHDL/Lab2/output_files/LogicalStep_Lab2_top.
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                               ;
-+-----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------+--------------+
-; Compilation Hierarchy Node  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                          ; Library Name ;
-+-----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------+--------------+
-; |LogicalStep_Lab2_top       ; 65 (1)      ; 11 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 30   ; 0            ; 54 (1)       ; 0 (0)             ; 11 (0)           ; 0          ; |LogicalStep_Lab2_top                        ; work         ;
-;    |SevenSegment:INST1|     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|SevenSegment:INST1     ; work         ;
-;    |SevenSegment:INST2|     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|SevenSegment:INST2     ; work         ;
-;    |adder_8bit:INST6|       ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|adder_8bit:INST6       ; work         ;
-;    |logic_proccessor:INST7| ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|logic_proccessor:INST7 ; work         ;
-;    |segment7_mux:INST3|     ; 18 (18)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 11 (11)          ; 0          ; |LogicalStep_Lab2_top|segment7_mux:INST3     ; work         ;
-;    |two_one_mux:INST4|      ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|two_one_mux:INST4      ; work         ;
-;    |two_one_mux:INST5|      ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|two_one_mux:INST5      ; work         ;
-+-----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                       ;
++---------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                              ; Library Name ;
++---------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------------+--------------+
+; |LogicalStep_Lab2_top           ; 68 (2)      ; 11 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 30   ; 0            ; 57 (2)       ; 0 (0)             ; 11 (0)           ; 0          ; |LogicalStep_Lab2_top                            ; work         ;
+;    |SevenSegment:LeftSegment|   ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|SevenSegment:LeftSegment   ; work         ;
+;    |SevenSegment:RightSegment|  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|SevenSegment:RightSegment  ; work         ;
+;    |adder_8bit:Adder|           ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|adder_8bit:Adder           ; work         ;
+;    |four_one_mux:SumDisplayMux| ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|four_one_mux:SumDisplayMux ; work         ;
+;    |four_one_mux:SumLogicMux|   ; 20 (20)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|four_one_mux:SumLogicMux   ; work         ;
+;    |segment7_mux:SegmentMux|    ; 18 (18)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 11 (11)          ; 0          ; |LogicalStep_Lab2_top|segment7_mux:SegmentMux    ; work         ;
++---------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -766,105 +765,111 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; seg7_char2   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; sw[4]        ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
 ; sw[0]        ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
-; pb[3]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; pb[0]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; pb[1]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; pb[2]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; pb[0]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; pb[1]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; sw[1]        ; Input    ; --            ; (6) 873 ps    ; --                    ; --  ; --   ;
+; pb[3]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; sw[1]        ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
 ; sw[5]        ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
 ; sw[2]        ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
-; sw[6]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; sw[3]        ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
+; sw[6]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; sw[7]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; sw[3]        ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
 ; clkin_50     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +--------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+--------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                     ;
-+--------------------------------------+-------------------+---------+
-; Source Pin / Fanout                  ; Pad To Core Index ; Setting ;
-+--------------------------------------+-------------------+---------+
-; sw[4]                                ;                   ;         ;
-;      - adder_8bit:INST6|Add0~0       ; 0                 ; 6       ;
-;      - logic_proccessor:INST7|Mux3~0 ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[4]~4   ; 0                 ; 6       ;
-; sw[0]                                ;                   ;         ;
-;      - adder_8bit:INST6|Add0~0       ; 0                 ; 6       ;
-;      - logic_proccessor:INST7|Mux3~0 ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[0]~0   ; 0                 ; 6       ;
-; pb[3]                                ;                   ;         ;
-;      - two_one_mux:INST5|dout[1]~0   ; 0                 ; 6       ;
-;      - logic_proccessor:INST7|Mux3~1 ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~1   ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~3   ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[4]~9   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[0]~0   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[1]~1   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[2]~2   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[3]~3   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[4]~4   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[5]~5   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[6]~6   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[7]~7   ; 0                 ; 6       ;
-; pb[2]                                ;                   ;         ;
-;      - two_one_mux:INST5|dout[1]~0   ; 0                 ; 6       ;
-;      - logic_proccessor:INST7|Mux3~1 ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~1   ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~3   ; 0                 ; 6       ;
-; pb[0]                                ;                   ;         ;
-;      - logic_proccessor:INST7|Mux3~0 ; 1                 ; 6       ;
-;      - logic_proccessor:INST7|Mux3~1 ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~1   ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~2   ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[2]~5   ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[3]~7   ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[3]~10  ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[3]~11  ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[2]~12  ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[2]~13  ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~14  ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~15  ; 1                 ; 6       ;
-; pb[1]                                ;                   ;         ;
-;      - logic_proccessor:INST7|Mux3~0 ; 0                 ; 6       ;
-;      - logic_proccessor:INST7|Mux3~1 ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~1   ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~2   ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~3   ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[2]~5   ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[3]~7   ; 0                 ; 6       ;
-; sw[1]                                ;                   ;         ;
-;      - adder_8bit:INST6|Add0~2       ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~2   ; 1                 ; 6       ;
-;      - two_one_mux:INST4|dout[1]~1   ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~14  ; 1                 ; 6       ;
-; sw[5]                                ;                   ;         ;
-;      - adder_8bit:INST6|Add0~2       ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~2   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[5]~5   ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[1]~15  ; 0                 ; 6       ;
-; sw[2]                                ;                   ;         ;
-;      - adder_8bit:INST6|Add0~4       ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[2]~5   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[2]~2   ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[2]~12  ; 0                 ; 6       ;
-; sw[6]                                ;                   ;         ;
-;      - adder_8bit:INST6|Add0~4       ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[2]~5   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[6]~6   ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[2]~13  ; 0                 ; 6       ;
-; sw[3]                                ;                   ;         ;
-;      - adder_8bit:INST6|Add0~6       ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[3]~7   ; 0                 ; 6       ;
-;      - two_one_mux:INST4|dout[3]~3   ; 0                 ; 6       ;
-;      - two_one_mux:INST5|dout[3]~10  ; 0                 ; 6       ;
-; sw[7]                                ;                   ;         ;
-;      - adder_8bit:INST6|Add0~6       ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[3]~7   ; 1                 ; 6       ;
-;      - two_one_mux:INST4|dout[7]~7   ; 1                 ; 6       ;
-;      - two_one_mux:INST5|dout[3]~11  ; 1                 ; 6       ;
-; clkin_50                             ;                   ;         ;
-+--------------------------------------+-------------------+---------+
++------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                         ;
++------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                      ; Pad To Core Index ; Setting ;
++------------------------------------------+-------------------+---------+
+; sw[4]                                    ;                   ;         ;
+;      - adder_8bit:Adder|Add0~0           ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux7~1   ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux3~0 ; 0                 ; 6       ;
+; sw[0]                                    ;                   ;         ;
+;      - adder_8bit:Adder|Add0~0           ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux7~1   ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux7~0 ; 0                 ; 6       ;
+; pb[0]                                    ;                   ;         ;
+;      - four_one_mux:SumLogicMux|Mux7~0   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux7~1   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~0   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~1   ; 0                 ; 6       ;
+;      - error~0                           ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux5~0   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux4~1   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux4~3   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux5~3   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux5~4   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~4   ; 0                 ; 6       ;
+; pb[1]                                    ;                   ;         ;
+;      - four_one_mux:SumLogicMux|Mux7~0   ; 1                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux7~1   ; 1                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~0   ; 1                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~1   ; 1                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~2   ; 1                 ; 6       ;
+;      - error~0                           ; 1                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux5~0   ; 1                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux4~1   ; 1                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux4~3   ; 1                 ; 6       ;
+; pb[2]                                    ;                   ;         ;
+;      - four_one_mux:SumLogicMux|Mux4~0   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux7~2   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~0   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~2   ; 0                 ; 6       ;
+;      - error~0                           ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux4~2   ; 0                 ; 6       ;
+; pb[3]                                    ;                   ;         ;
+;      - four_one_mux:SumLogicMux|Mux4~0   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux7~2   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~0   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~2   ; 0                 ; 6       ;
+;      - error~0                           ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux4~2   ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux4~0 ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux3~0   ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux7~0 ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux6~0 ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux5~0 ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux4~1 ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux3~0 ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux2~0 ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux1~0 ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux0~0 ; 0                 ; 6       ;
+; sw[1]                                    ;                   ;         ;
+;      - adder_8bit:Adder|Add0~2           ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~1   ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux6~0 ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~4   ; 0                 ; 6       ;
+; sw[5]                                    ;                   ;         ;
+;      - adder_8bit:Adder|Add0~2           ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~1   ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux2~0 ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux6~4   ; 0                 ; 6       ;
+; sw[2]                                    ;                   ;         ;
+;      - adder_8bit:Adder|Add0~4           ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux5~0   ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux5~0 ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux5~3   ; 0                 ; 6       ;
+; sw[6]                                    ;                   ;         ;
+;      - adder_8bit:Adder|Add0~4           ; 1                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux5~0   ; 1                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux1~0 ; 1                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux5~4   ; 1                 ; 6       ;
+; sw[7]                                    ;                   ;         ;
+;      - adder_8bit:Adder|Add0~6           ; 1                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux4~1   ; 1                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux4~3   ; 1                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux0~0 ; 1                 ; 6       ;
+; sw[3]                                    ;                   ;         ;
+;      - adder_8bit:Adder|Add0~6           ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux4~1   ; 0                 ; 6       ;
+;      - four_one_mux:SumLogicMux|Mux4~3   ; 0                 ; 6       ;
+;      - four_one_mux:SumDisplayMux|Mux4~1 ; 0                 ; 6       ;
+; clkin_50                                 ;                   ;         ;
++------------------------------------------+-------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -890,25 +895,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 64 / 27,275 ( < 1 % ) ;
-; C16 interconnects     ; 13 / 1,240 ( 1 % )    ;
-; C4 interconnects      ; 45 / 20,832 ( < 1 % ) ;
-; Direct links          ; 13 / 27,275 ( < 1 % ) ;
+; Block interconnects   ; 73 / 27,275 ( < 1 % ) ;
+; C16 interconnects     ; 16 / 1,240 ( 1 % )    ;
+; C4 interconnects      ; 46 / 20,832 ( < 1 % ) ;
+; Direct links          ; 14 / 27,275 ( < 1 % ) ;
 ; Global clocks         ; 1 / 10 ( 10 % )       ;
-; Local interconnects   ; 35 / 8,064 ( < 1 % )  ;
+; Local interconnects   ; 37 / 8,064 ( < 1 % )  ;
 ; R24 interconnects     ; 8 / 1,320 ( < 1 % )   ;
-; R4 interconnects      ; 34 / 28,560 ( < 1 % ) ;
+; R4 interconnects      ; 40 / 28,560 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 13.00) ; Number of LABs  (Total = 5) ;
+; Number of Logic Elements  (Average = 11.33) ; Number of LABs  (Total = 6) ;
 +---------------------------------------------+-----------------------------+
 ; 1                                           ; 1                           ;
 ; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
+; 3                                           ; 1                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
@@ -928,7 +933,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 0.20) ; Number of LABs  (Total = 5) ;
+; LAB-wide Signals  (Average = 0.17) ; Number of LABs  (Total = 6) ;
 +------------------------------------+-----------------------------+
 ; 1 Clock                            ; 1                           ;
 +------------------------------------+-----------------------------+
@@ -937,12 +942,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 15.20) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced  (Average = 13.17) ; Number of LABs  (Total = 6) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 1                           ;
 ; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
+; 3                                            ; 1                           ;
 ; 4                                            ; 0                           ;
 ; 5                                            ; 0                           ;
 ; 6                                            ; 0                           ;
@@ -973,34 +978,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 6.40) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced Out  (Average = 6.17) ; Number of LABs  (Total = 6) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 1                           ;
 ; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
+; 3                                               ; 1                           ;
 ; 4                                               ; 1                           ;
 ; 5                                               ; 0                           ;
 ; 6                                               ; 0                           ;
 ; 7                                               ; 1                           ;
 ; 8                                               ; 0                           ;
-; 9                                               ; 1                           ;
+; 9                                               ; 0                           ;
 ; 10                                              ; 0                           ;
-; 11                                              ; 1                           ;
+; 11                                              ; 2                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 9.00) ; Number of LABs  (Total = 5) ;
+; Number of Distinct Inputs  (Average = 8.67) ; Number of LABs  (Total = 6) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
-; 5                                           ; 0                           ;
+; 5                                           ; 1                           ;
 ; 6                                           ; 0                           ;
 ; 7                                           ; 1                           ;
 ; 8                                           ; 0                           ;
@@ -1009,7 +1014,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
 ; 13                                          ; 0                           ;
-; 14                                          ; 2                           ;
+; 14                                          ; 1                           ;
+; 15                                          ; 0                           ;
+; 16                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1092,16 +1099,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; seg7_char2         ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[4]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[0]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; pb[3]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; pb[2]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; pb[0]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; pb[1]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; pb[2]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; pb[3]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[1]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[5]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[2]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[6]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; sw[3]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[7]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sw[3]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clkin_50           ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
@@ -1172,7 +1179,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clkin_50~input (placed in PIN 29 (CLK1p, DIFFIO_RX_L20p, DIFFOUT_L20p, High_Speed)) File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 7
+Info (176353): Automatically promoted node clkin_50~input (placed in PIN 29 (CLK1p, DIFFIO_RX_L20p, DIFFOUT_L20p, High_Speed)) File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 7
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1250,14 +1257,14 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X9_Y12
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1265,19 +1272,19 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 13 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin sw[4] uses I/O standard 3.3-V LVCMOS at 8 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[0] uses I/O standard 3.3-V LVCMOS at 30 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin pb[3] uses I/O standard 3.3-V LVCMOS at 43 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 8
-    Info (169178): Pin pb[2] uses I/O standard 3.3-V LVCMOS at 44 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 8
-    Info (169178): Pin pb[0] uses I/O standard 3.3-V LVCMOS at 46 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 8
-    Info (169178): Pin pb[1] uses I/O standard 3.3-V LVCMOS at 45 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 8
-    Info (169178): Pin sw[1] uses I/O standard 3.3-V LVCMOS at 13 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[5] uses I/O standard 3.3-V LVCMOS at 6 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[2] uses I/O standard 3.3-V LVCMOS at 14 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[6] uses I/O standard 3.3-V LVCMOS at 39 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[3] uses I/O standard 3.3-V LVCMOS at 11 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[7] uses I/O standard 3.3-V LVCMOS at 141 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin clkin_50 uses I/O standard 3.3-V LVCMOS at 29 File: N:/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 7
+    Info (169178): Pin sw[4] uses I/O standard 3.3-V LVCMOS at 8 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[0] uses I/O standard 3.3-V LVCMOS at 30 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin pb[0] uses I/O standard 3.3-V LVCMOS at 46 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 8
+    Info (169178): Pin pb[1] uses I/O standard 3.3-V LVCMOS at 45 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 8
+    Info (169178): Pin pb[2] uses I/O standard 3.3-V LVCMOS at 44 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 8
+    Info (169178): Pin pb[3] uses I/O standard 3.3-V LVCMOS at 43 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 8
+    Info (169178): Pin sw[1] uses I/O standard 3.3-V LVCMOS at 13 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[5] uses I/O standard 3.3-V LVCMOS at 6 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[2] uses I/O standard 3.3-V LVCMOS at 14 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[6] uses I/O standard 3.3-V LVCMOS at 39 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[7] uses I/O standard 3.3-V LVCMOS at 141 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[3] uses I/O standard 3.3-V LVCMOS at 11 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin clkin_50 uses I/O standard 3.3-V LVCMOS at 29 File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 7
 Warning (14579): Pin leds[2] uses I/O standard 3.3-V LVCMOS located at 17 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Warning (14579): Pin leds[3] uses I/O standard 3.3-V LVCMOS located at 12 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Warning (14579): Pin leds[4] uses I/O standard 3.3-V LVCMOS located at 10 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
@@ -1294,19 +1301,19 @@ Warning (14579): Pin sw[4] uses I/O standard 3.3-V LVCMOS located at 8 will have
 Warning (14579): Pin sw[1] uses I/O standard 3.3-V LVCMOS located at 13 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Warning (14579): Pin sw[5] uses I/O standard 3.3-V LVCMOS located at 6 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Warning (14579): Pin sw[2] uses I/O standard 3.3-V LVCMOS located at 14 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
-Warning (14579): Pin sw[3] uses I/O standard 3.3-V LVCMOS located at 11 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Warning (14579): Pin sw[7] uses I/O standard 3.3-V LVCMOS located at 141 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
-Info (144001): Generated suppressed messages file N:/VHDL/Lab2/output_files/LogicalStep_Lab2_top.fit.smsg
+Warning (14579): Pin sw[3] uses I/O standard 3.3-V LVCMOS located at 11 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
+Info (144001): Generated suppressed messages file N:/ECE-124/VHDL/Lab2/output_files/LogicalStep_Lab2_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 90 warnings
-    Info: Peak virtual memory: 1449 megabytes
-    Info: Processing ended: Sat Jun 03 13:34:36 2017
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 1448 megabytes
+    Info: Processing ended: Mon Jun 05 12:37:40 2017
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in N:/VHDL/Lab2/output_files/LogicalStep_Lab2_top.fit.smsg.
+The suppressed messages can be found in N:/ECE-124/VHDL/Lab2/output_files/LogicalStep_Lab2_top.fit.smsg.
 
 

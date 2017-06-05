@@ -39,11 +39,13 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
    ); 
    end component;
 	
-	-- Define two_one_mux component
-	component two_one_mux port (
-				 toggle 		: in  std_logic;
+	-- Define four_one_mux component
+	component four_one_mux port (
+				 toggle 		: in  std_logic_vector(1 downto 0);	
 				 in_1 		: in  std_logic_vector(7 downto 0);	
 				 in_2 		: in  std_logic_vector(7 downto 0);
+				 in_3 		: in  std_logic_vector(7 downto 0);	
+				 in_4 		: in  std_logic_vector(7 downto 0);	
 				 dout			: out	std_logic_vector(7 downto 0)
 			  );
 	end component;
@@ -84,16 +86,26 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 	-- Bus that contains output of logic processor
 	signal logic_bus 	: std_logic_vector(3 downto 0);
 	
+	signal error 		: std_logic;
+	
 	
 -- Here the circuit begins
 
 begin
+
+	-- Calculates the error bit. If any more than one switch is pushed then error.
+	error <= (not pb(0) or not pb(1) or not pb(3)) and 
+				(not pb(1) or not pb(2) or not pb(3)) and 
+				(not pb(2) or not pb(1) or not pb(0)) and 
+				(not pb(2) or not pb(3) or not pb(0));
+
    hex_B <= sw(3 downto 0);
    hex_A <= sw(7 downto 4);
 	
 	LeftSegment: SevenSegment port map (seg_bus(3 downto 0), seg7_A);
    RightSegment: SevenSegment port map (seg_bus(7 downto 4), seg7_B);
 	
+	-- Adds hexA to hexB and outputs it to sum_bus
 	Adder: adder_8bit port map ("0000" & hex_A, "0000" & hex_B, sum_bus);
 	
 	Logic: logic_proccessor port map (hex_A, hex_B, (not pb(2 downto 0)), logic_bus);
@@ -101,9 +113,9 @@ begin
 	-- Defines the mux for switching between the two segment displays -> output to segment displays
 	SegmentMux: segment7_mux port map (clkin_50, seg7_A, seg7_B, seg7_data, seg7_char2, seg7_char1);
 	-- Defines mux that switches between hex display and sum -> output to display
-	SumDisplayMux: two_one_mux port map (not pb(3), hex_A & hex_B, sum_bus, seg_bus);
+	SumDisplayMux: four_one_mux port map (error & not pb(3), hex_A & hex_B, sum_bus, "10001000", "10001000", seg_bus);
 	-- Defines mux that switches between sum and logic -> output to leds
-	SumLogicMux: two_one_mux port map (pb(3), sum_bus, "0000" & logic_bus, leds);
+	SumLogicMux: four_one_mux port map (error & not pb(3), "0000" & logic_bus, sum_bus, "11111111", "11111111", leds);
  
 end SimpleCircuit;
 

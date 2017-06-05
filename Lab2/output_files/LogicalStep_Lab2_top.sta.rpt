@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for LogicalStep_Lab2_top
-Sat Jun 03 13:35:16 2017
+Mon Jun 05 12:38:21 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -98,7 +98,7 @@ agreement for further details.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 402.58 MHz ; 250.0 MHz       ; clkin_50   ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 402.74 MHz ; 250.0 MHz       ; clkin_50   ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -108,7 +108,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+---------------+
 ; Clock    ; Slack  ; End Point TNS ;
 +----------+--------+---------------+
-; clkin_50 ; -1.484 ; -11.453       ;
+; clkin_50 ; -1.483 ; -11.443       ;
 +----------+--------+---------------+
 
 
@@ -117,7 +117,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+---------------+
 ; Clock    ; Slack ; End Point TNS ;
 +----------+-------+---------------+
-; clkin_50 ; 0.380 ; 0.000         ;
+; clkin_50 ; 0.381 ; 0.000         ;
 +----------+-------+---------------+
 
 
@@ -181,16 +181,16 @@ No synchronizer chains to report.
 +--------------+-----------------------+-----------------+-----------------+
 ; sw[4]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; sw[0]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
-; pb[3]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
-; pb[2]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; pb[0]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; pb[1]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
+; pb[2]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
+; pb[3]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; sw[1]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; sw[5]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; sw[2]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; sw[6]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
-; sw[3]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; sw[7]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
+; sw[3]        ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; clkin_50     ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TMS~ ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TCK~ ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
@@ -264,9 +264,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 12    ; 12   ;
-; Unconstrained Input Port Paths  ; 108   ; 108  ;
-; Unconstrained Output Ports      ; 14    ; 14   ;
-; Unconstrained Output Port Paths ; 117   ; 117  ;
+; Unconstrained Input Port Paths  ; 144   ; 144  ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 153   ; 153  ;
 +---------------------------------+-------+------+
 
 
@@ -309,6 +309,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; leds[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; leds[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; leds[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; leds[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; leds[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; leds[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; seg7_char1   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; seg7_char2   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; seg7_data[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -351,6 +354,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; leds[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; leds[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; leds[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; leds[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; leds[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; leds[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; seg7_char1   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; seg7_char2   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; seg7_data[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -369,7 +375,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
-    Info: Processing started: Sat Jun 03 13:35:11 2017
+    Info: Processing started: Mon Jun 05 12:38:17 2017
 Info: Command: quartus_sta LogicalStep_Lab2 -c LogicalStep_Lab2_top
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -384,14 +390,14 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQue
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.484
+Info (332146): Worst-case setup slack is -1.483
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.484             -11.453 clkin_50 
-Info (332146): Worst-case hold slack is 0.380
+    Info (332119):    -1.483             -11.443 clkin_50 
+Info (332146): Worst-case hold slack is 0.381
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.380               0.000 clkin_50 
+    Info (332119):     0.381               0.000 clkin_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -402,7 +408,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 766 megabytes
-    Info: Processing ended: Sat Jun 03 13:35:15 2017
+    Info: Processing ended: Mon Jun 05 12:38:21 2017
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
