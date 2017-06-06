@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LogicalStep_Lab2_top
-Mon Jun 05 12:37:12 2017
+Tue Jun 06 11:56:31 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -47,7 +47,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jun 05 12:37:12 2017           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 06 11:56:31 2017           ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
 ; Revision Name                      ; LogicalStep_Lab2_top                            ;
 ; Top-level Entity Name              ; LogicalStep_Lab2_top                            ;
@@ -324,7 +324,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -334,12 +334,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
-    Info: Processing started: Mon Jun 05 12:36:39 2017
+    Info: Processing started: Tue Jun 06 11:55:37 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LogicalStep_Lab2 -c LogicalStep_Lab2_top
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file adder_8bit.vhd
-    Info (12022): Found design unit 1: adder_8bit-adder_8bit File: N:/ECE-124/VHDL/Lab2/adder_8bit.vhd Line: 14
-    Info (12023): Found entity 1: adder_8bit File: N:/ECE-124/VHDL/Lab2/adder_8bit.vhd Line: 6
+    Info (12022): Found design unit 1: adder_8bit-adder_8bit File: N:/ECE-124/VHDL/Lab2/adder_8bit.vhd Line: 16
+    Info (12023): Found entity 1: adder_8bit File: N:/ECE-124/VHDL/Lab2/adder_8bit.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file sevensegment.vhd
     Info (12022): Found design unit 1: SevenSegment-Behavioral File: N:/ECE-124/VHDL/Lab2/SevenSegment.vhd Line: 18
     Info (12023): Found entity 1: SevenSegment File: N:/ECE-124/VHDL/Lab2/SevenSegment.vhd Line: 10
@@ -356,7 +356,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file four_mu
     Info (12022): Found design unit 1: four_one_mux-four_one_mux File: N:/ECE-124/VHDL/Lab2/four_mux.vhd Line: 17
     Info (12023): Found entity 1: four_one_mux File: N:/ECE-124/VHDL/Lab2/four_mux.vhd Line: 6
 Info (12127): Elaborating entity "LogicalStep_Lab2_top" for the top level hierarchy
-Info (12128): Elaborating entity "SevenSegment" for hierarchy "SevenSegment:LeftSegment" File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 106
+Info (12128): Elaborating entity "SevenSegment" for hierarchy "SevenSegment:LeftSegment" File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 105
 Info (12128): Elaborating entity "adder_8bit" for hierarchy "adder_8bit:Adder" File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 109
 Info (12128): Elaborating entity "logic_proccessor" for hierarchy "logic_proccessor:Logic" File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 111
 Info (12128): Elaborating entity "segment7_mux" for hierarchy "segment7_mux:SegmentMux" File: N:/ECE-124/VHDL/Lab2/LogicalStep_Lab2_top.vhd Line: 114
@@ -369,9 +369,9 @@ Info (21057): Implemented 97 device resources after synthesis - the final resour
     Info (21059): Implemented 17 output pins
     Info (21061): Implemented 67 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 857 megabytes
-    Info: Processing ended: Mon Jun 05 12:37:12 2017
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:01:00
+    Info: Peak virtual memory: 858 megabytes
+    Info: Processing ended: Tue Jun 06 11:56:32 2017
+    Info: Elapsed time: 00:00:55
+    Info: Total CPU time (on all processors): 00:01:16
 
 
