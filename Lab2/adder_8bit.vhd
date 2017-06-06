@@ -3,11 +3,13 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 -- Defines an enity for adding two 8 bit signals and output an 8 bit added signal
+-- Note makes more sense to make this a 8 bit adder thats why we take in two 8 bit signals
+-- this allows us to see the carry 
 entity adder_8bit is
    port (
 			 in_1 		: in  std_logic_vector(7 downto 0);	
 			 in_2 		: in  std_logic_vector(7 downto 0);
-			 add 			: out  std_logic_vector(7 downto 0)
+			 add 		: out  std_logic_vector(7 downto 0)
         );
 end entity adder_8bit;
 
@@ -20,6 +22,6 @@ begin
 	-- Cast to unsigned
 	a <= unsigned(in_1);
 	b <= unsigned(in_2);
-	-- Add unsigned numbers and cast to vector
+	-- Add unsigned numbers and cast to logic vector
 	add <= std_logic_vector(a + b);
 end architecture adder_8bit;

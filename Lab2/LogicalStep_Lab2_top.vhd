@@ -30,7 +30,7 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 	
 	-- Define segment7_mux component
 	component segment7_mux port (
-          clk        : in  std_logic;
+			 clk        : in  std_logic;
 			 DIN2 		: in  std_logic_vector(6 downto 0);	
 			 DIN1 		: in  std_logic_vector(6 downto 0);
 			 DOUT			: out	std_logic_vector(6 downto 0);
@@ -112,9 +112,9 @@ begin
 	
 	-- Defines the mux for switching between the two segment displays -> output to segment displays
 	SegmentMux: segment7_mux port map (clkin_50, seg7_A, seg7_B, seg7_data, seg7_char2, seg7_char1);
-	-- Defines mux that switches between hex display and sum -> output to display
+	-- Defines mux that switches between hex display, sum and two other inputs which we tie to an error message.
 	SumDisplayMux: four_one_mux port map (error & not pb(3), hex_A & hex_B, sum_bus, "10001000", "10001000", seg_bus);
-	-- Defines mux that switches between sum and logic -> output to leds
+	-- Defines mux that switches between sum, logic and two other inputs which we tie to an error message.
 	SumLogicMux: four_one_mux port map (error & not pb(3), "0000" & logic_bus, sum_bus, "11111111", "11111111", leds);
  
 end SimpleCircuit;
