@@ -4,23 +4,17 @@ use ieee.numeric_std.all;
 
 entity Compx1 is
    port (
-			 in_a 		: in  std_logic;	
-			 in_b 		: in  std_logic;
-			 mag			: out	std_logic_vector(2 downto 0)
+			 compx1_in_a 		: in  std_logic;
+			 compx1_in_b 		: in  std_logic;
+			 compx1_previous   	: in  std_logic_vector(1 downto 0);
+			 compx1_mag			: out std_logic_vector(1 downto 0)
         );
 end entity Compx1;
 
 architecture Compx1 of Compx1 is begin
 
-	mag(0) <= not in_a and in_b;
+	mag(1) <= (not in_a) and (not in_b) and previous(1) or (in_a) and (in_b) and (previous(1));
 
-	mag(1) <= in_a xnor in_b;
-	
-	mag(2) <= in_a and not in_b;
-
-	--with in_a & in_b select
-	--	mag <= "100" when "10",
-	--			 "001" when "01",
-	--			 "010" when others;
+	mag(0) <= (in_b) and (previous(0)) or (previous(0)) and (not in_a) or (not in_a) and (in_b) and (not previous(1)); 
 
 end architecture Compx1;
