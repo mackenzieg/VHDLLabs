@@ -6,10 +6,10 @@ use ieee.numeric_std.all;
 entity four_one_mux is
    port (
 			 toggle 	: in  std_logic_vector(1 downto 0) := "00";
-			 in_1 		: in  std_logic_vector(7 downto 0);	
-			 in_2 		: in  std_logic_vector(7 downto 0);
-			 in_3 		: in  std_logic_vector(7 downto 0);
-			 in_4 		: in  std_logic_vector(7 downto 0);
+			 in_1 	: in  std_logic_vector(7 downto 0);	
+			 in_2 	: in  std_logic_vector(7 downto 0);
+			 in_3 	: in  std_logic_vector(7 downto 0);
+			 in_4 	: in  std_logic_vector(7 downto 0);
 			 dout		: out	std_logic_vector(7 downto 0)
         );
 end entity four_one_mux;

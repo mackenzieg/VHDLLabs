@@ -7,8 +7,8 @@ use ieee.numeric_std.all;
 -- this allows us to see the carry 
 entity adder_8bit is
    port (
-			 in_1 		: in  std_logic_vector(7 downto 0);	
-			 in_2 		: in  std_logic_vector(7 downto 0);
+			 in_1 	: in  std_logic_vector(7 downto 0);	
+			 in_2 	: in  std_logic_vector(7 downto 0);
 			 add 		: out  std_logic_vector(7 downto 0)
         );
 end entity adder_8bit;
