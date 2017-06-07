@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Compx1 is
+   port (
+			 in_a 		: in  std_logic;	
+			 in_b 		: in  std_logic;
+			 mag			: out	std_logic_vector(2 downto 0);
+        );
+end entity Compx1;
+
+architecture Compx1 of Compx1 is begin
+	with in_a & in_b select
+		mag <= "100" when "10",
+				 "001" when "01",
+				 "010" when others;
+
+end architecture Compx1;
