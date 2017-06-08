@@ -1,0 +1,118 @@
+|LogicalStep_Lab3_top
+clkin_50 => ~NO_FANOUT~
+pb[0] => ~NO_FANOUT~
+pb[1] => ~NO_FANOUT~
+pb[2] => ~NO_FANOUT~
+pb[3] => ~NO_FANOUT~
+sw[0] => Compx4:INST1.compx4_in_a[0]
+sw[1] => Compx4:INST1.compx4_in_a[1]
+sw[2] => Compx4:INST1.compx4_in_a[2]
+sw[3] => Compx4:INST1.compx4_in_a[3]
+sw[4] => Compx4:INST1.compx4_in_b[0]
+sw[5] => Compx4:INST1.compx4_in_b[1]
+sw[6] => Compx4:INST1.compx4_in_b[2]
+sw[7] => Compx4:INST1.compx4_in_b[3]
+leds[0] <= Compx4:INST1.compx4_mag[0]
+leds[1] <= Compx4:INST1.compx4_mag[1]
+leds[2] <= <GND>
+leds[3] <= <GND>
+leds[4] <= <GND>
+leds[5] <= <GND>
+leds[6] <= <GND>
+leds[7] <= <GND>
+seg7_data[0] <= seg7_data[0].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[1] <= seg7_data[1].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[2] <= seg7_data[2].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[3] <= seg7_data[3].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[4] <= seg7_data[4].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[5] <= seg7_data[5].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[6] <= seg7_data[6].DB_MAX_OUTPUT_PORT_TYPE
+seg7_char1 <= seg7_char1.DB_MAX_OUTPUT_PORT_TYPE
+seg7_char2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:INST1
+compx4_in_a[0] => Compx1:bit1.compx1_in_a
+compx4_in_a[1] => Compx1:bit2.compx1_in_a
+compx4_in_a[2] => Compx1:bit3.compx1_in_a
+compx4_in_a[3] => Compx1:bit4.compx1_in_a
+compx4_in_b[0] => Compx1:bit1.compx1_in_b
+compx4_in_b[1] => Compx1:bit2.compx1_in_b
+compx4_in_b[2] => Compx1:bit3.compx1_in_b
+compx4_in_b[3] => Compx1:bit4.compx1_in_b
+compx4_mag[0] <= Compx1:bit4.compx1_mag[0]
+compx4_mag[1] <= Compx1:bit4.compx1_mag[1]
+
+
+|LogicalStep_Lab3_top|Compx4:INST1|Compx1:bit1
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_b => compx1_mag.IN1
+compx1_in_b => compx1_mag.IN0
+compx1_in_b => compx1_mag.IN1
+compx1_in_b => compx1_mag.IN1
+compx1_previous[0] => compx1_mag.IN1
+compx1_previous[0] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_mag[0] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
+compx1_mag[1] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:INST1|Compx1:bit2
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_b => compx1_mag.IN1
+compx1_in_b => compx1_mag.IN0
+compx1_in_b => compx1_mag.IN1
+compx1_in_b => compx1_mag.IN1
+compx1_previous[0] => compx1_mag.IN1
+compx1_previous[0] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_mag[0] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
+compx1_mag[1] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:INST1|Compx1:bit3
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_b => compx1_mag.IN1
+compx1_in_b => compx1_mag.IN0
+compx1_in_b => compx1_mag.IN1
+compx1_in_b => compx1_mag.IN1
+compx1_previous[0] => compx1_mag.IN1
+compx1_previous[0] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_mag[0] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
+compx1_mag[1] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:INST1|Compx1:bit4
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_a => compx1_mag.IN0
+compx1_in_b => compx1_mag.IN1
+compx1_in_b => compx1_mag.IN0
+compx1_in_b => compx1_mag.IN1
+compx1_in_b => compx1_mag.IN1
+compx1_previous[0] => compx1_mag.IN1
+compx1_previous[0] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_previous[1] => compx1_mag.IN1
+compx1_mag[0] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
+compx1_mag[1] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
+
+

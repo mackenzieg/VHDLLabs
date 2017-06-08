@@ -19,24 +19,39 @@ architecture Energy_Monitor of LogicalStep_Lab3_top is
 
 component Compx4 is
    port (
-			 in_a 		: in  std_logic_vector(3 downto 0);
-			 in_b 		: in  std_logic_vector(3 downto 0);
-			 mag			: out	std_logic_vector(2 downto 0)
+			 compx4_in_a 		: in  std_logic_vector(3 downto 0);
+			 compx4_in_b 		: in  std_logic_vector(3 downto 0);
+			 compx4_mag			: out std_logic_vector(1 downto 0)
+        );
+end component;
+
+component Thermostat is
+   port (
+			 current_temp  	: in  std_logic_vector(3 downto 0);
+			 desired_temp 		: in  std_logic_vector(3 downto 0);
+			 orifices  			: in  std_logic_vector(2 downto 0);
+			 vacation_mode		: in  std_logic;
+			 
+			 output				: out std_logic_vector(3 downto 0)
         );
 end component;
 
 signal in_a 	: std_logic_vector(3 downto 0);
 signal in_b 	: std_logic_vector(3 downto 0);
-signal output 	: std_logic_vector(2 downto 0);
+signal compare 	: std_logic_vector(1 downto 0);
 
 begin
 	
 	in_a <= sw(3 downto 0);
 	in_b <= sw(7 downto 4);
 	
-	INST1 : Compx4 port map (in_a, in_b, output);
+	INST1 : Compx4 port map(in_a, in_b, compare);
 	
-	leds <= "00000" & output;
+	leds(1 downto 0) <= compare;
+	
+	--thermo_cntrl : Thermostat port map (in_a, in_b, not pb(2 downto 0), not pb(3), leds(3 downto 0));
+	
+	--leds(6 downto 4) <= not pb(2 downto 0);
 	
  
 end Energy_Monitor;

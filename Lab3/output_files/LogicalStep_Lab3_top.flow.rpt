@@ -1,5 +1,5 @@
 Flow report for LogicalStep_Lab3_top
-Wed Jun 07 13:41:22 2017
+Thu Jun 08 11:09:26 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -38,24 +38,28 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+-----------------------------+-------------------------------------------------+
-; Flow Status                 ; Flow Failed - Wed Jun 07 13:41:22 2017          ;
-; Quartus Prime Version       ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
-; Revision Name               ; LogicalStep_Lab3_top                            ;
-; Top-level Entity Name       ; LogicalStep_Lab3_top                            ;
-; Family                      ; Cyclone V                                       ;
-; Device                      ; 5CGXFC7C7F23C8                                  ;
-; Timing Models               ; Final                                           ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
-; Total registers             ; N/A until Partition Merge                       ;
-; Total pins                  ; N/A until Partition Merge                       ;
-; Total virtual pins          ; N/A until Partition Merge                       ;
-; Total block memory bits     ; N/A until Partition Merge                       ;
-; Total PLLs                  ; N/A until Partition Merge                       ;
-; Total DLLs                  ; N/A until Partition Merge                       ;
-+-----------------------------+-------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Thu Jun 08 11:09:26 2017           ;
+; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
+; Revision Name                      ; LogicalStep_Lab3_top                            ;
+; Top-level Entity Name              ; LogicalStep_Lab3_top                            ;
+; Family                             ; MAX 10                                          ;
+; Device                             ; 10M08SAE144C8G                                  ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 8 / 8,064 ( < 1 % )                             ;
+;     Total combinational functions  ; 8 / 8,064 ( < 1 % )                             ;
+;     Dedicated logic registers      ; 0 / 8,064 ( 0 % )                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 30 / 101 ( 30 % )                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 387,072 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 0 / 48 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 1 ( 0 % )                                   ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                                   ;
+; ADC blocks                         ; 0 / 1 ( 0 % )                                   ;
++------------------------------------+-------------------------------------------------+
 
 
 +------------------------------------------+
@@ -63,50 +67,85 @@ agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 06/07/2017 13:40:53  ;
+; Start date & time ; 06/08/2017 11:07:13  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; LogicalStep_Lab3_top ;
 +-------------------+----------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                    ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 53350634236814.149685725206120 ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                           ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                       ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --            ; --          ; --             ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 53350634236814.149693443208508        ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
+; FLOW_ENABLE_POWER_ANALYZER          ; On                                    ; Off           ; --          ; --             ;
+; IOBANK_VCCIO                        ; 3.3V                                  ; --            ; --          ; 1A             ;
+; IOBANK_VCCIO                        ; 3.3V                                  ; --            ; --          ; 1B             ;
+; IOBANK_VCCIO                        ; 3.3V                                  ; --            ; --          ; 2              ;
+; IOBANK_VCCIO                        ; 3.3V                                  ; --            ; --          ; 3              ;
+; IOBANK_VCCIO                        ; 3.3V                                  ; --            ; --          ; 4              ;
+; IOBANK_VCCIO                        ; 3.3V                                  ; --            ; --          ; 5              ;
+; IOBANK_VCCIO                        ; 3.3V                                  ; --            ; --          ; 6              ;
+; IOBANK_VCCIO                        ; 3.3V                                  ; --            ; --          ; 7              ;
+; IOBANK_VCCIO                        ; 3.3V                                  ; --            ; --          ; 8              ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                            ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                            ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                ; 12.5%         ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
+; TIMEQUEST_MULTICORNER_ANALYSIS      ; Off                                   ; On            ; --          ; --             ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:33     ; 1.0                     ; 900 MB              ; 00:00:53                           ;
-; Total                ; 00:00:33     ; --                      ; --                  ; 00:00:53                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:35     ; 1.0                     ; 857 MB              ; 00:00:59                           ;
+; Fitter                    ; 00:00:17     ; 1.0                     ; 1442 MB             ; 00:00:11                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 742 MB              ; 00:00:03                           ;
+; PowerPlay Power Analyzer  ; 00:00:07     ; 1.0                     ; 855 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 758 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 698 MB              ; 00:00:02                           ;
+; Total                     ; 00:01:14     ; --                      ; --                  ; 00:01:23                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                   ;
-+----------------------+------------------+-----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; ECE-FPGA2        ; Windows 8 ; 6.2        ; x86_64         ;
-+----------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; ECE-FPGA2        ; Windows 8 ; 6.2        ; x86_64         ;
+; Fitter                    ; ECE-FPGA2        ; Windows 8 ; 6.2        ; x86_64         ;
+; Assembler                 ; ECE-FPGA2        ; Windows 8 ; 6.2        ; x86_64         ;
+; PowerPlay Power Analyzer  ; ECE-FPGA2        ; Windows 8 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; ECE-FPGA2        ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; ECE-FPGA2        ; Windows 8 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c LogicalStep_Lab3_top
+quartus_map --read_settings_files=on --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_fit --read_settings_files=off --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_asm --read_settings_files=off --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_pow --read_settings_files=off --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_sta LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --read_settings_files=off --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top
 
 
 

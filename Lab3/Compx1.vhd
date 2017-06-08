@@ -6,15 +6,15 @@ entity Compx1 is
    port (
 			 compx1_in_a 		: in  std_logic;
 			 compx1_in_b 		: in  std_logic;
-			 compx1_previous   	: in  std_logic_vector(1 downto 0);
+			 compx1_previous  : in  std_logic_vector(1 downto 0);
 			 compx1_mag			: out std_logic_vector(1 downto 0)
         );
 end entity Compx1;
 
 architecture Compx1 of Compx1 is begin
 
-	mag(1) <= (not in_a) and (not in_b) and previous(1) or (in_a) and (in_b) and (previous(1));
+	compx1_mag(1) <= ((not compx1_in_a) and (not compx1_in_b) and compx1_previous(1)) or ((compx1_in_a) and (compx1_in_b) and (compx1_previous(1)));
 
-	mag(0) <= (in_b) and (previous(0)) or (previous(0)) and (not in_a) or (not in_a) and (in_b) and (not previous(1)); 
+	compx1_mag(0) <= ((compx1_in_b) and (compx1_previous(0))) or ((compx1_previous(0)) and (not compx1_in_a)) or ((not compx1_in_a) and (compx1_in_b) and (not compx1_previous(1))); 
 
 end architecture Compx1;
