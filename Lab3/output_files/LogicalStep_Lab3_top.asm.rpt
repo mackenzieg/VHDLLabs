@@ -1,5 +1,5 @@
 Assembler report for LogicalStep_Lab3_top
-Thu Jun 08 11:08:35 2017
+Mon Jun 19 14:15:39 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: N:/ECE-124/VHDL/Lab3/output_files/LogicalStep_Lab3_top.sof
+  5. Assembler Device Options: N:/VHDL/Lab3/output_files/LogicalStep_Lab3_top.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Jun 08 11:08:35 2017 ;
+; Assembler Status      ; Successful - Mon Jun 19 14:15:39 2017 ;
 ; Revision Name         ; LogicalStep_Lab3_top                  ;
 ; Top-level Entity Name ; LogicalStep_Lab3_top                  ;
 ; Family                ; MAX 10                                ;
@@ -53,24 +53,24 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+------------------------------------------------------------+
-; Assembler Generated Files                                  ;
-+------------------------------------------------------------+
-; File Name                                                  ;
-+------------------------------------------------------------+
-; N:/ECE-124/VHDL/Lab3/output_files/LogicalStep_Lab3_top.sof ;
-+------------------------------------------------------------+
++----------------------------------------------------+
+; Assembler Generated Files                          ;
++----------------------------------------------------+
+; File Name                                          ;
++----------------------------------------------------+
+; N:/VHDL/Lab3/output_files/LogicalStep_Lab3_top.sof ;
++----------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Assembler Device Options: N:/ECE-124/VHDL/Lab3/output_files/LogicalStep_Lab3_top.sof ;
-+----------------+---------------------------------------------------------------------+
-; Option         ; Setting                                                             ;
-+----------------+---------------------------------------------------------------------+
-; Device         ; 10M08SAE144C8G                                                      ;
-; JTAG usercode  ; 0x00087745                                                          ;
-; Checksum       ; 0x00087745                                                          ;
-+----------------+---------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+; Assembler Device Options: N:/VHDL/Lab3/output_files/LogicalStep_Lab3_top.sof ;
++----------------+-------------------------------------------------------------+
+; Option         ; Setting                                                     ;
++----------------+-------------------------------------------------------------+
+; Device         ; 10M08SAE144C8G                                              ;
+; JTAG usercode  ; 0x0008CBCE                                                  ;
+; Checksum       ; 0x0008CBCE                                                  ;
++----------------+-------------------------------------------------------------+
 
 
 +--------------------+
@@ -79,13 +79,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
-    Info: Processing started: Thu Jun 08 11:08:30 2017
+    Info: Processing started: Mon Jun 19 14:15:34 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 742 megabytes
-    Info: Processing ended: Thu Jun 08 11:08:35 2017
+    Info: Processing ended: Mon Jun 19 14:15:39 2017
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:03
 

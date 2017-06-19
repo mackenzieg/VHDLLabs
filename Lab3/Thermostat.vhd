@@ -7,7 +7,6 @@ entity Thermostat is
 			 current_temp  	: in  std_logic_vector(3 downto 0);
 			 desired_temp 		: in  std_logic_vector(3 downto 0);
 			 orifices  			: in  std_logic_vector(2 downto 0);
-			 vacation_mode		: in  std_logic;
 			 
 			 output				: out std_logic_vector(3 downto 0)
         );
@@ -23,15 +22,15 @@ component Compx4 is
         );
 end component;
 
-signal difference : std_logic_vector(1 downto 0);
+signal equal :		std_logic;
+signal below_temp : std_logic;
+signal above_temp : std_logic;
 
-signal current_tmp : std_logic_vector(3 downto 0);
+signal difference : std_logic_vector(1 downto 0);
 
 signal all_closed : std_logic;
 
 signal furnace_on : std_logic;
-
-signal system_at_temp : std_logic;
 
 signal ac_on		: std_logic;
 
@@ -39,18 +38,21 @@ signal blower_on	: std_logic;
 
 begin
 
-	current_tmp <= (current_temp) when (vacation_mode = '0') else ("0100");
+	equal <= difference(0) and difference(1);
+	below_temp <= difference(0) and not difference(1);
+	above_temp <= not difference(0) and not difference(1);
 
 	all_closed <= (not orifices(0) and not orifices(1) and not orifices(2));
 
-	comparitor : Compx4 port map (current_tmp, desired_temp, difference);
+	comparitor : Compx4 port map (current_temp, desired_temp, difference);
 
-	furnace_on <= (not difference(0) and difference(1)) and all_closed;
-	system_at_temp <= (difference(0) and difference(1));
-	ac_on <= (not difference(0) and not difference(1)) and all_closed;
-	blower_on <= (ac_on or system_at_temp) and all_closed;
+	furnace_on <= (below_temp) and all_closed;
+
+	ac_on <= (above_temp) and all_closed;
 	
-	output <= blower_on & ac_on & system_at_temp & furnace_on;
+	blower_on <= (ac_on or furnace_on) and all_closed;
+	
+	output <= blower_on & ac_on & equal & furnace_on;
 	
 
 end architecture Thermostat;

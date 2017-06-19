@@ -17,11 +17,30 @@ end LogicalStep_Lab3_top;
 
 architecture Energy_Monitor of LogicalStep_Lab3_top is
 
-component Compx4 is
+-- Define SevenSegment component
+component SevenSegment port (
+	hex   		:  in  std_logic_vector(3 downto 0);   -- The 4 bit data to be displayed
+	sevenseg 	:  out std_logic_vector(6 downto 0)    -- 7-bit outputs to a 7-segment
+); 
+end component;
+
+-- Define segment7_mux component
+component segment7_mux port (
+		 clk        : in  std_logic;
+		 DIN2 		: in  std_logic_vector(6 downto 0);	
+		 DIN1 		: in  std_logic_vector(6 downto 0);
+		 DOUT			: out	std_logic_vector(6 downto 0);
+		 DIG2			: out	std_logic;
+		 DIG1			: out	std_logic
+); 
+end component;
+
+component two_one_mux is
    port (
-			 compx4_in_a 		: in  std_logic_vector(3 downto 0);
-			 compx4_in_b 		: in  std_logic_vector(3 downto 0);
-			 compx4_mag			: out std_logic_vector(1 downto 0)
+			 toggle 	: in  std_logic;
+			 in_1 	: in  std_logic_vector(3 downto 0);	
+			 in_2 	: in  std_logic_vector(3 downto 0);
+			 dout		: out	std_logic_vector(3 downto 0)
         );
 end component;
 
@@ -30,28 +49,35 @@ component Thermostat is
 			 current_temp  	: in  std_logic_vector(3 downto 0);
 			 desired_temp 		: in  std_logic_vector(3 downto 0);
 			 orifices  			: in  std_logic_vector(2 downto 0);
-			 vacation_mode		: in  std_logic;
 			 
 			 output				: out std_logic_vector(3 downto 0)
         );
 end component;
 
-signal in_a 	: std_logic_vector(3 downto 0);
-signal in_b 	: std_logic_vector(3 downto 0);
-signal compare 	: std_logic_vector(1 downto 0);
+signal in_a, in_b, shwoop_bus 	 : std_logic_vector(3 downto 0);
+signal compare  : std_logic_vector(1 downto 0);
+
+signal seg7_a, seg7_b : std_logic_vector(6 downto 0);
+
+signal vac_mode : std_logic;
 
 begin
 	
 	in_a <= sw(3 downto 0);
 	in_b <= sw(7 downto 4);
 	
-	INST1 : Compx4 port map(in_a, in_b, compare);
+	vac_mode <= not pb(3);
 	
-	leds(1 downto 0) <= compare;
+	elon_mux : two_one_mux port map (vac_mode, in_b, "0100", shwoop_bus);
 	
-	--thermo_cntrl : Thermostat port map (in_a, in_b, not pb(2 downto 0), not pb(3), leds(3 downto 0));
+	thermo_cntrl : Thermostat port map (in_a, shwoop_bus, not pb(2 downto 0), leds(3 downto 0));
 	
-	--leds(6 downto 4) <= not pb(2 downto 0);
+	leds(7 downto 4) <= not pb(3 downto 0);
+	
+	left_decoder: SevenSegment port map (shwoop_bus, seg7_b);
+	right_decoder: SevenSegment port map (in_a, seg7_a);
+	
+	output : segment7_mux port map (clkin_50, seg7_b, seg7_a, seg7_data, seg7_char1, seg7_char2);
 	
  
 end Energy_Monitor;
