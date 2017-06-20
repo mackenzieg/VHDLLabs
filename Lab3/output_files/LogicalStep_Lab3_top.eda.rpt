@@ -1,5 +1,5 @@
 EDA Netlist Writer report for LogicalStep_Lab3_top
-Tue Jun 20 11:54:39 2017
+Tue Jun 20 12:23:17 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Jun 20 11:54:39 2017 ;
+; EDA Netlist Writer Status ; Successful - Tue Jun 20 12:23:17 2017 ;
 ; Revision Name             ; LogicalStep_Lab3_top                  ;
 ; Top-level Entity Name     ; LogicalStep_Lab3_top                  ;
 ; Family                    ; MAX 10                                ;
@@ -95,13 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Altera and sold by Altera or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Tue Jun 20 11:54:38 2017
+    Info: Processing started: Tue Jun 20 12:23:14 2017
 Info: Command: quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=N:/VHDL/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+Info (119006): Selected device 10M08SAE144C8G for design "LogicalStep_Lab3_top"
 Info (204019): Generated file LogicalStep_Lab3_top.vo in folder "N:/VHDL/Lab3/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 705 megabytes
-    Info: Processing ended: Tue Jun 20 11:54:39 2017
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 722 megabytes
+    Info: Processing ended: Tue Jun 20 12:23:17 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
