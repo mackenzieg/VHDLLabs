@@ -1,5 +1,5 @@
 Assembler report for LogicalStep_Lab3_top
-Mon Jun 19 14:15:39 2017
+Tue Jun 20 11:19:23 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Jun 19 14:15:39 2017 ;
+; Assembler Status      ; Successful - Tue Jun 20 11:19:23 2017 ;
 ; Revision Name         ; LogicalStep_Lab3_top                  ;
 ; Top-level Entity Name ; LogicalStep_Lab3_top                  ;
 ; Family                ; MAX 10                                ;
@@ -68,8 +68,8 @@ agreement for further details.
 ; Option         ; Setting                                                     ;
 +----------------+-------------------------------------------------------------+
 ; Device         ; 10M08SAE144C8G                                              ;
-; JTAG usercode  ; 0x0008CBCE                                                  ;
-; Checksum       ; 0x0008CBCE                                                  ;
+; JTAG usercode  ; 0x000879A3                                                  ;
+; Checksum       ; 0x000879A3                                                  ;
 +----------------+-------------------------------------------------------------+
 
 
@@ -79,14 +79,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
-    Info: Processing started: Mon Jun 19 14:15:34 2017
+    Info: Processing started: Tue Jun 20 11:19:19 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 742 megabytes
-    Info: Processing ended: Mon Jun 19 14:15:39 2017
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 740 megabytes
+    Info: Processing ended: Tue Jun 20 11:19:23 2017
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 

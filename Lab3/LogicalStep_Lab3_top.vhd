@@ -54,6 +54,14 @@ component Thermostat is
         );
 end component;
 
+component Compx4 is
+   port (
+			 compx4_in_a 		: in  std_logic_vector(3 downto 0);
+			 compx4_in_b 		: in  std_logic_vector(3 downto 0);
+			 compx4_mag			: out std_logic_vector(1 downto 0)
+        );
+end component;
+
 signal in_a, in_b, shwoop_bus 	 : std_logic_vector(3 downto 0);
 signal compare  : std_logic_vector(1 downto 0);
 
@@ -61,23 +69,31 @@ signal seg7_a, seg7_b : std_logic_vector(6 downto 0);
 
 signal vac_mode : std_logic;
 
+signal temp_comp : std_logic_vector(1 downto 0);
+
 begin
 	
 	in_a <= sw(3 downto 0);
 	in_b <= sw(7 downto 4);
 	
-	vac_mode <= not pb(3);
+	comp : Compx4 port map (in_a, in_b, temp_comp);
 	
-	elon_mux : two_one_mux port map (vac_mode, in_b, "0100", shwoop_bus);
+	leds(0) <= not temp_comp(0) and not temp_comp(1);
+	leds(1) <= temp_comp(0) and temp_comp(1);
+	leds(2) <= temp_comp(0) and not temp_comp(1);
 	
-	thermo_cntrl : Thermostat port map (in_a, shwoop_bus, not pb(2 downto 0), leds(3 downto 0));
+	--vac_mode <= not pb(3);
 	
-	leds(7 downto 4) <= not pb(3 downto 0);
+	--elon_mux : two_one_mux port map (vac_mode, in_b, "0100", shwoop_bus);
 	
-	left_decoder: SevenSegment port map (shwoop_bus, seg7_b);
-	right_decoder: SevenSegment port map (in_a, seg7_a);
+	--thermo_cntrl : Thermostat port map (in_a, shwoop_bus, not pb(2 downto 0), leds(3 downto 0));
 	
-	output : segment7_mux port map (clkin_50, seg7_b, seg7_a, seg7_data, seg7_char1, seg7_char2);
+	--leds(7 downto 4) <= not pb(3 downto 0);
+	
+	--left_decoder: SevenSegment port map (shwoop_bus, seg7_b);
+	--right_decoder: SevenSegment port map (in_a, seg7_a);
+	
+	--output : segment7_mux port map (clkin_50, seg7_b, seg7_a, seg7_data, seg7_char1, seg7_char2);
 	
  
 end Energy_Monitor;
