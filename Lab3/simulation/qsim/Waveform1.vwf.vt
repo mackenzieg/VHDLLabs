@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/20/2017 12:23:07"
+// Generated on "06/21/2017 10:23:42"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          LogicalStep_Lab3_top
 // 
@@ -58,7 +58,7 @@ end
 // sw[3]
 initial
 begin
-	sw[3] = 1'b0;
+	sw[3] = 1'b1;
 end 
 
 // sw[2]
@@ -76,51 +76,49 @@ end
 // sw[0]
 initial
 begin
-	sw[0] = 1'b1;
+	sw[0] = 1'b0;
 end 
 
 // sw[7]
 initial
 begin
-	repeat(3)
-	begin
-		sw[7] = 1'b0;
-		sw[7] = #160000 1'b1;
-		# 160000;
-	end
 	sw[7] = 1'b0;
+	sw[7] = #504000 1'b1;
 end 
 
 // sw[6]
 initial
 begin
-	repeat(6)
-	begin
-		sw[6] = 1'b0;
-		sw[6] = #80000 1'b1;
-		# 80000;
-	end
 	sw[6] = 1'b0;
+	sw[6] = #252000 1'b1;
+	sw[6] = #252000 1'b0;
+	sw[6] = #252000 1'b1;
 end 
 
 // sw[5]
 initial
 begin
-	repeat(12)
+	repeat(3)
 	begin
 		sw[5] = 1'b0;
-		sw[5] = #40000 1'b1;
-		# 40000;
+		sw[5] = #126000 1'b1;
+		# 126000;
 	end
 	sw[5] = 1'b0;
+	sw[5] = #126000 1'b1;
 end 
 
 // sw[4]
-always
+initial
 begin
+	repeat(7)
+	begin
+		sw[4] = 1'b0;
+		sw[4] = #63000 1'b1;
+		# 63000;
+	end
 	sw[4] = 1'b0;
-	sw[4] = #20000 1'b1;
-	#20000;
+	sw[4] = #63000 1'b1;
 end 
 endmodule
 

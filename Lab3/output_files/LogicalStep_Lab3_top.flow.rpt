@@ -1,5 +1,5 @@
 Flow report for LogicalStep_Lab3_top
-Tue Jun 20 12:23:17 2017
+Wed Jun 21 10:23:54 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Jun 20 12:23:17 2017           ;
+; Flow Status                        ; Successful - Wed Jun 21 10:23:54 2017           ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
 ; Revision Name                      ; LogicalStep_Lab3_top                            ;
 ; Top-level Entity Name              ; LogicalStep_Lab3_top                            ;
@@ -118,7 +118,13 @@ agreement for further details.
 ; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 714 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 710 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 714 MB              ; 00:00:02                           ;
-; Total                ; 00:00:51     ; --                      ; --                  ; 00:01:05                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 710 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 714 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 710 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 714 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 710 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 714 MB              ; 00:00:02                           ;
+; Total                ; 00:01:13     ; --                      ; --                  ; 00:01:16                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -132,6 +138,12 @@ agreement for further details.
 ; EDA Netlist Writer   ; ECE-FPGA2        ; Windows 8 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; ECE-FPGA2        ; Windows 8 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; ECE-FPGA2        ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ECE-RTOS22       ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ECE-RTOS22       ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ECE-RTOS22       ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ECE-RTOS22       ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ECE-RTOS22       ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ECE-RTOS22       ; Windows 8 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -139,6 +151,12 @@ agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=N:/VHDL/Lab3/Waveform1.vwf --testbench_file=N:/VHDL/Lab3/simulation/qsim/Waveform1.vwf.vt
+quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=N:/VHDL/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=N:/VHDL/Lab3/Waveform1.vwf --testbench_file=N:/VHDL/Lab3/simulation/qsim/Waveform1.vwf.vt
+quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=N:/VHDL/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=N:/VHDL/Lab3/Waveform1.vwf --testbench_file=N:/VHDL/Lab3/simulation/qsim/Waveform1.vwf.vt
+quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=N:/VHDL/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=N:/VHDL/Lab3/Waveform1.vwf --testbench_file=N:/VHDL/Lab3/simulation/qsim/Waveform1.vwf.vt
 quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=N:/VHDL/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=N:/VHDL/Lab3/Waveform1.vwf --testbench_file=N:/VHDL/Lab3/simulation/qsim/Waveform1.vwf.vt
