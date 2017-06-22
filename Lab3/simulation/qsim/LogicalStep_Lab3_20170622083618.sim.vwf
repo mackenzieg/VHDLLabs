@@ -158,7 +158,12 @@ TRANSITION_LIST("leds[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 189.0;
+			LEVEL 1 FOR 811.0;
+		}
 	}
 }
 
@@ -167,7 +172,13 @@ TRANSITION_LIST("leds[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 126.0;
+			LEVEL 1 FOR 63.0;
+			LEVEL 0 FOR 811.0;
+		}
 	}
 }
 
@@ -176,7 +187,12 @@ TRANSITION_LIST("leds[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 126.0;
+			LEVEL 0 FOR 874.0;
+		}
 	}
 }
 
@@ -185,8 +201,12 @@ TRANSITION_LIST("sw[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 504.0;
-		LEVEL 1 FOR 496.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 504.0;
+			LEVEL 1 FOR 496.0;
+		}
 	}
 }
 
@@ -200,9 +220,9 @@ TRANSITION_LIST("sw[6]")
 			REPEAT = 1;
 			LEVEL 0 FOR 252.0;
 			LEVEL 1 FOR 252.0;
+			LEVEL 0 FOR 252.0;
+			LEVEL 1 FOR 244.0;
 		}
-		LEVEL 0 FOR 252.0;
-		LEVEL 1 FOR 244.0;
 	}
 }
 
@@ -213,12 +233,16 @@ TRANSITION_LIST("sw[5]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 3;
+			REPEAT = 1;
 			LEVEL 0 FOR 126.0;
 			LEVEL 1 FOR 126.0;
+			LEVEL 0 FOR 126.0;
+			LEVEL 1 FOR 126.0;
+			LEVEL 0 FOR 126.0;
+			LEVEL 1 FOR 126.0;
+			LEVEL 0 FOR 126.0;
+			LEVEL 1 FOR 118.0;
 		}
-		LEVEL 0 FOR 126.0;
-		LEVEL 1 FOR 118.0;
 	}
 }
 
@@ -229,12 +253,24 @@ TRANSITION_LIST("sw[4]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 7;
+			REPEAT = 1;
 			LEVEL 0 FOR 63.0;
 			LEVEL 1 FOR 63.0;
+			LEVEL 0 FOR 63.0;
+			LEVEL 1 FOR 63.0;
+			LEVEL 0 FOR 63.0;
+			LEVEL 1 FOR 63.0;
+			LEVEL 0 FOR 63.0;
+			LEVEL 1 FOR 63.0;
+			LEVEL 0 FOR 63.0;
+			LEVEL 1 FOR 63.0;
+			LEVEL 0 FOR 63.0;
+			LEVEL 1 FOR 63.0;
+			LEVEL 0 FOR 63.0;
+			LEVEL 1 FOR 63.0;
+			LEVEL 0 FOR 63.0;
+			LEVEL 1 FOR 55.0;
 		}
-		LEVEL 0 FOR 63.0;
-		LEVEL 1 FOR 55.0;
 	}
 }
 
@@ -243,7 +279,11 @@ TRANSITION_LIST("sw[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -252,7 +292,11 @@ TRANSITION_LIST("sw[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -261,7 +305,11 @@ TRANSITION_LIST("sw[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -270,7 +318,11 @@ TRANSITION_LIST("sw[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
