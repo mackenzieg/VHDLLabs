@@ -9,6 +9,7 @@ source_file = 1, output_files/Chain1.cdf
 source_file = 1, N:/VHDL/Lab3/Thermostat.vhd
 source_file = 1, N:/VHDL/Lab3/two_to_one.vhd
 source_file = 1, N:/VHDL/Lab3/Waveform.vwf
+source_file = 1, N:/VHDL/Lab3/Waveform1.vwf
 source_file = 1, c:/software/altera/15.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/software/altera/15.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/software/altera/15.1/quartus/libraries/vhdl/ieee/timing_b.vhd

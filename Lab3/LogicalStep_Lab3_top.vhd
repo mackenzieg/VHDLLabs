@@ -73,7 +73,9 @@ signal temp_comp : std_logic_vector(1 downto 0);
 
 begin
 	
+	-- Map switches to in_a
 	in_a <= sw(3 downto 0);
+	-- Map switches to in_b
 	in_b <= sw(7 downto 4);
 	
 	--comp : Compx4 port map (in_a, in_b, temp_comp);
@@ -82,14 +84,19 @@ begin
 	--leds(1) <= temp_comp(0) and temp_comp(1);
 	--leds(2) <= temp_comp(0) and not temp_comp(1);
 	
+	-- Map vacation mode to pb 3
 	vac_mode <= not pb(3);
 	
+	-- Mux that switches between vacation mode and normal switch inputs
 	elon_mux : two_one_mux port map (vac_mode, in_b, "0100", shwoop_bus);
 	
+	-- Thermostat that controls the house temp
 	thermo_cntrl : Thermostat port map (in_a, shwoop_bus, not pb(2 downto 0), leds(3 downto 0));
 	
+	-- Display what buttons are pressed
 	leds(7 downto 4) <= not pb(3 downto 0);
 	
+	-- Display the desired temp and current temp
 	left_decoder: SevenSegment port map (shwoop_bus, seg7_b);
 	right_decoder: SevenSegment port map (in_a, seg7_a);
 	

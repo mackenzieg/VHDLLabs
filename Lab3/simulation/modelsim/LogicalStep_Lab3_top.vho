@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition"
 
--- DATE "06/20/2017 12:11:15"
+-- DATE "06/22/2017 08:40:28"
 
 -- 
 -- Device: Altera 10M08SAE144C8G Package EQFP144
@@ -199,6 +199,7 @@ SIGNAL \left_decoder|Mux2~0_combout\ : std_logic;
 SIGNAL \right_decoder|Mux2~0_combout\ : std_logic;
 SIGNAL \output|DOUT[4]~4_combout\ : std_logic;
 SIGNAL \thermo_cntrl|output\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \output|ALT_INV_clk_proc:COUNT[10]~q\ : std_logic;
 SIGNAL \ALT_INV_pb[2]~input_o\ : std_logic;
 SIGNAL \ALT_INV_pb[1]~input_o\ : std_logic;
 SIGNAL \ALT_INV_pb[0]~input_o\ : std_logic;
@@ -207,7 +208,6 @@ SIGNAL \output|ALT_INV_DOUT[4]~4_combout\ : std_logic;
 SIGNAL \output|ALT_INV_DOUT[3]~3_combout\ : std_logic;
 SIGNAL \output|ALT_INV_DOUT[2]~2_combout\ : std_logic;
 SIGNAL \output|ALT_INV_DOUT[0]~0_combout\ : std_logic;
-SIGNAL \output|ALT_INV_clk_proc:COUNT[10]~q\ : std_logic;
 
 BEGIN
 
@@ -225,6 +225,7 @@ ww_devpor <= devpor;
 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ <= (\~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\);
 
 \clkin_50~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \clkin_50~input_o\);
+\output|ALT_INV_clk_proc:COUNT[10]~q\ <= NOT \output|clk_proc:COUNT[10]~q\;
 \ALT_INV_pb[2]~input_o\ <= NOT \pb[2]~input_o\;
 \ALT_INV_pb[1]~input_o\ <= NOT \pb[1]~input_o\;
 \ALT_INV_pb[0]~input_o\ <= NOT \pb[0]~input_o\;
@@ -233,7 +234,6 @@ ww_devpor <= devpor;
 \output|ALT_INV_DOUT[3]~3_combout\ <= NOT \output|DOUT[3]~3_combout\;
 \output|ALT_INV_DOUT[2]~2_combout\ <= NOT \output|DOUT[2]~2_combout\;
 \output|ALT_INV_DOUT[0]~0_combout\ <= NOT \output|DOUT[0]~0_combout\;
-\output|ALT_INV_clk_proc:COUNT[10]~q\ <= NOT \output|clk_proc:COUNT[10]~q\;
 
 -- Location: LCCOMB_X11_Y24_N20
 \~QUARTUS_CREATED_GND~I\ : fiftyfivenm_lcell_comb
