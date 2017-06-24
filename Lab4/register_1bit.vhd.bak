@@ -1,0 +1,7 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity register_1bit is port(
+	d : std_logic;
+);

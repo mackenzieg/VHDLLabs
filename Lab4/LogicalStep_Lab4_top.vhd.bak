@@ -6,29 +6,20 @@ USE ieee.numeric_std.ALL;
 ENTITY LogicalStep_Lab4_top IS
    PORT
 	(
-		clkin_50		: in	std_logic;
-		rst_n			: in	std_logic;
-		pb				: in	std_logic_vector(3 downto 0);
-		sw   			: in  std_logic_vector(7 downto 0); -- The switch inputs
-		leds			: out std_logic_vector(7 downto 0);	-- for displaying the switch content
-		seg7_data 	: out std_logic_vector(6 downto 0); -- 7-bit outputs to a 7-segment
-		seg7_char1  : out	std_logic;							-- seg7 digi selectors
-		seg7_char2  : out	std_logic							-- seg7 digi selectors
+   clkin_50		: in	std_logic;
+	rst_n			: in	std_logic;
+	pb				: in	std_logic_vector(3 downto 0);
+ 	sw   			: in  std_logic_vector(7 downto 0); -- The switch inputs
+   leds			: out std_logic_vector(7 downto 0);	-- for displaying the switch content
+   seg7_data 	: out std_logic_vector(6 downto 0); -- 7-bit outputs to a 7-segment
+	seg7_char1  : out	std_logic;							-- seg7 digi selectors
+	seg7_char2  : out	std_logic							-- seg7 digi selectors
 	);
 END LogicalStep_Lab4_top;
 
 ARCHITECTURE SimpleCircuit OF LogicalStep_Lab4_top IS
 
-component register_4bit is
-	port (
-	right_shift_input 						: in std_logic;
-	left_shift_input 						: in std_logic;
-	load					: in std_logic;
-	shift_direction	: in std_logic;
-	clk 					: in std_logic;
-	output				: out std_logic_vector(3 downto 0)
-	);
-end component;
+
 	
 ----------------------------------------------------------------------------------------------------
 	CONSTANT	SIM							:  boolean := FALSE; 	-- set to TRUE for simulation runs otherwise keep at 0.
@@ -59,10 +50,6 @@ Clock_Source:
 				std_logic(bin_counter(23));								-- for real FPGA operation
 					
 ---------------------------------------------------------------------------------------------------
-
-leds(7) <= Main_Clk;
-
-reg : register_4bit port map (not pb(0), not pb(1), not pb(2), not pb(3), Main_Clk, leds(3 downto 0));
 
 
 

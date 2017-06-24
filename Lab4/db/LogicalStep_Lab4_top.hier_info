@@ -1,0 +1,134 @@
+|LogicalStep_Lab4_top
+clkin_50 => bin_counter[0].CLK
+clkin_50 => bin_counter[1].CLK
+clkin_50 => bin_counter[2].CLK
+clkin_50 => bin_counter[3].CLK
+clkin_50 => bin_counter[4].CLK
+clkin_50 => bin_counter[5].CLK
+clkin_50 => bin_counter[6].CLK
+clkin_50 => bin_counter[7].CLK
+clkin_50 => bin_counter[8].CLK
+clkin_50 => bin_counter[9].CLK
+clkin_50 => bin_counter[10].CLK
+clkin_50 => bin_counter[11].CLK
+clkin_50 => bin_counter[12].CLK
+clkin_50 => bin_counter[13].CLK
+clkin_50 => bin_counter[14].CLK
+clkin_50 => bin_counter[15].CLK
+clkin_50 => bin_counter[16].CLK
+clkin_50 => bin_counter[17].CLK
+clkin_50 => bin_counter[18].CLK
+clkin_50 => bin_counter[19].CLK
+clkin_50 => bin_counter[20].CLK
+clkin_50 => bin_counter[21].CLK
+clkin_50 => bin_counter[22].CLK
+clkin_50 => bin_counter[23].CLK
+rst_n => ~NO_FANOUT~
+pb[0] => register_4bit:reg.right_shift_input
+pb[1] => register_4bit:reg.left_shift_input
+pb[2] => register_4bit:reg.load
+pb[3] => register_4bit:reg.shift_direction
+sw[0] => ~NO_FANOUT~
+sw[1] => ~NO_FANOUT~
+sw[2] => ~NO_FANOUT~
+sw[3] => ~NO_FANOUT~
+sw[4] => ~NO_FANOUT~
+sw[5] => ~NO_FANOUT~
+sw[6] => ~NO_FANOUT~
+sw[7] => ~NO_FANOUT~
+leds[0] <= register_4bit:reg.output[0]
+leds[1] <= register_4bit:reg.output[1]
+leds[2] <= register_4bit:reg.output[2]
+leds[3] <= register_4bit:reg.output[3]
+leds[4] <= <GND>
+leds[5] <= <GND>
+leds[6] <= <GND>
+leds[7] <= bin_counter[23].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[0] <= seg7_data[0].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[1] <= seg7_data[1].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[2] <= seg7_data[2].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[3] <= seg7_data[3].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[4] <= seg7_data[4].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[5] <= seg7_data[5].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[6] <= seg7_data[6].DB_MAX_OUTPUT_PORT_TYPE
+seg7_char1 <= seg7_char1.DB_MAX_OUTPUT_PORT_TYPE
+seg7_char2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab4_top|register_4bit:reg
+right_shift_input => two_one_mux:first_mux.in_1
+left_shift_input => two_one_mux:fourth_mux.in_2
+load => register_1bit:bit1.load
+load => register_1bit:bit2.load
+load => register_1bit:bit3.load
+load => register_1bit:bit4.load
+shift_direction => two_one_mux:first_mux.toggle
+shift_direction => two_one_mux:second_mux.toggle
+shift_direction => two_one_mux:third_mux.toggle
+shift_direction => two_one_mux:fourth_mux.toggle
+clk => register_1bit:bit1.clk
+clk => register_1bit:bit2.clk
+clk => register_1bit:bit3.clk
+clk => register_1bit:bit4.clk
+output[0] <= register_1bit:bit1.q
+output[1] <= register_1bit:bit2.q
+output[2] <= register_1bit:bit3.q
+output[3] <= register_1bit:bit4.q
+
+
+|LogicalStep_Lab4_top|register_4bit:reg|two_one_mux:first_mux
+toggle => dout.OUTPUTSELECT
+in_1 => dout.DATAB
+in_2 => dout.DATAA
+dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab4_top|register_4bit:reg|two_one_mux:second_mux
+toggle => dout.OUTPUTSELECT
+in_1 => dout.DATAB
+in_2 => dout.DATAA
+dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab4_top|register_4bit:reg|two_one_mux:third_mux
+toggle => dout.OUTPUTSELECT
+in_1 => dout.DATAB
+in_2 => dout.DATAA
+dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab4_top|register_4bit:reg|two_one_mux:fourth_mux
+toggle => dout.OUTPUTSELECT
+in_1 => dout.DATAB
+in_2 => dout.DATAA
+dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab4_top|register_4bit:reg|register_1bit:bit1
+d => q~reg0.DATAIN
+load => q~reg0.ENA
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab4_top|register_4bit:reg|register_1bit:bit2
+d => q~reg0.DATAIN
+load => q~reg0.ENA
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab4_top|register_4bit:reg|register_1bit:bit3
+d => q~reg0.DATAIN
+load => q~reg0.ENA
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab4_top|register_4bit:reg|register_1bit:bit4
+d => q~reg0.DATAIN
+load => q~reg0.ENA
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
