@@ -3,19 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clkin_50'
-Slack : -2.340
-TNS   : -36.475
+Slack : -2.357
+TNS   : -37.122
 
 Type  : Slow 1200mV 85C Model Setup 'bin_counter[23]'
-Slack : -0.345
-TNS   : -0.477
+Slack : -0.164
+TNS   : -0.533
 
 Type  : Slow 1200mV 85C Model Hold 'bin_counter[23]'
-Slack : 0.362
+Slack : 0.361
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clkin_50'
-Slack : 0.378
+Slack : 0.380
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkin_50'
@@ -24,22 +24,22 @@ TNS   : -38.688
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'bin_counter[23]'
 Slack : -1.487
-TNS   : -5.948
+TNS   : -22.305
 
 Type  : Slow 1200mV 0C Model Setup 'clkin_50'
-Slack : -2.005
-TNS   : -30.825
+Slack : -2.020
+TNS   : -31.465
 
 Type  : Slow 1200mV 0C Model Setup 'bin_counter[23]'
-Slack : -0.259
-TNS   : -0.295
+Slack : -0.082
+TNS   : -0.290
 
 Type  : Slow 1200mV 0C Model Hold 'bin_counter[23]'
-Slack : 0.325
+Slack : 0.323
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clkin_50'
-Slack : 0.338
+Slack : 0.340
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkin_50'
@@ -48,30 +48,30 @@ TNS   : -38.688
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'bin_counter[23]'
 Slack : -1.487
-TNS   : -5.948
+TNS   : -22.305
 
 Type  : Fast 1200mV 0C Model Setup 'clkin_50'
-Slack : -0.386
-TNS   : -1.666
+Slack : -0.481
+TNS   : -1.869
 
 Type  : Fast 1200mV 0C Model Setup 'bin_counter[23]'
-Slack : 0.434
+Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'bin_counter[23]'
-Slack : 0.152
+Slack : 0.151
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clkin_50'
-Slack : 0.154
+Slack : 0.156
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkin_50'
 Slack : -3.000
-TNS   : -31.008
+TNS   : -31.103
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'bin_counter[23]'
 Slack : -1.000
-TNS   : -4.000
+TNS   : -15.000
 
 ------------------------------------------------------------

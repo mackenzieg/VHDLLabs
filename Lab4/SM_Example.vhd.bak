@@ -79,7 +79,7 @@ BEGIN
             END IF;			
 				
          WHEN S4 =>
-            IF ( I4 ='1') THEN 
+            IF ( I4r ='1') THEN 
                next_state <= S5;
             ELSE 
                next_state <= S4;

@@ -19,15 +19,39 @@ END LogicalStep_Lab4_top;
 
 ARCHITECTURE SimpleCircuit OF LogicalStep_Lab4_top IS
 
-component register_4bit is
-	port (
-	right_shift_input 						: in std_logic;
-	left_shift_input 						: in std_logic;
-	load					: in std_logic;
-	shift_direction	: in std_logic;
-	clk 					: in std_logic;
-	output				: out std_logic_vector(3 downto 0)
+component Moore_state_machine IS Port
+(
+	clk 			: in std_logic;
+	reset 		: in std_logic;
+	comparison  : in std_logic_vector(1 downto 0);
+	output		: out std_logic_vector(3 downto 0)
 	);
+END component;
+
+component Compx4 is
+   port (
+			 compx4_in_a 		: in  std_logic_vector(3 downto 0);
+			 compx4_in_b 		: in  std_logic_vector(3 downto 0);
+			 compx4_mag			: out std_logic_vector(1 downto 0)
+        );
+end component;
+
+-- Define SevenSegment component
+component SevenSegment port (
+	hex   		:  in  std_logic_vector(3 downto 0);   -- The 4 bit data to be displayed
+	sevenseg 	:  out std_logic_vector(6 downto 0)    -- 7-bit outputs to a 7-segment
+); 
+end component;
+
+-- Define segment7_mux component
+component segment7_mux port (
+		 clk        : in  std_logic;
+		 DIN2 		: in  std_logic_vector(6 downto 0);	
+		 DIN1 		: in  std_logic_vector(6 downto 0);
+		 DOUT			: out	std_logic_vector(6 downto 0);
+		 DIG2			: out	std_logic;
+		 DIG1			: out	std_logic
+); 
 end component;
 	
 ----------------------------------------------------------------------------------------------------
@@ -40,6 +64,12 @@ end component;
 	
 	SIGNAL	Simple_States 				: std_logic_vector(7 downto 0);
 	SIGNAL	Left0_Right1				: std_logic;
+	
+	signal   comparison					: std_logic_vector(1 downto 0);
+	
+	signal   current_state				: std_logic_vector(3 downto 0);
+	
+	signal seg7_a, seg7_b : std_logic_vector(6 downto 0);
 
 ----------------------------------------------------------------------------------------------------
 BEGIN
@@ -62,8 +92,14 @@ Clock_Source:
 
 leds(7) <= Main_Clk;
 
-reg : register_4bit port map (not pb(0), not pb(1), not pb(2), not pb(3), Main_Clk, leds(3 downto 0));
+comp : Compx4 port map (sw(7 downto 4), sw(3 downto 0), comparison);
 
+state_machine : Moore_state_machine port map (Main_Clk, '0', comparison, current_state);
 
+-- Display the desired temp and current temp
+left_decoder: SevenSegment port map (current_state, seg7_b);
+right_decoder: SevenSegment port map (sw(3 downto 0), seg7_a);
+
+output : segment7_mux port map (clkin_50, seg7_b, seg7_a, seg7_data, seg7_char1, seg7_char2);
 
 END SimpleCircuit;
