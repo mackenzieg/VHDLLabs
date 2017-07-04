@@ -1,5 +1,4 @@
 |LogicalStep_Lab4_top
-clkin_50 => segment7_mux:output.clk
 clkin_50 => bin_counter[0].CLK
 clkin_50 => bin_counter[1].CLK
 clkin_50 => bin_counter[2].CLK
@@ -25,249 +24,69 @@ clkin_50 => bin_counter[21].CLK
 clkin_50 => bin_counter[22].CLK
 clkin_50 => bin_counter[23].CLK
 rst_n => ~NO_FANOUT~
-pb[0] => ~NO_FANOUT~
-pb[1] => ~NO_FANOUT~
+pb[0] => shift_register_8bit:shift_reg.shift_direction
+pb[1] => shift_register_8bit:shift_reg.reset
 pb[2] => ~NO_FANOUT~
 pb[3] => ~NO_FANOUT~
-sw[0] => Compx4:comp.compx4_in_b[0]
-sw[0] => SevenSegment:right_decoder.hex[0]
-sw[1] => Compx4:comp.compx4_in_b[1]
-sw[1] => SevenSegment:right_decoder.hex[1]
-sw[2] => Compx4:comp.compx4_in_b[2]
-sw[2] => SevenSegment:right_decoder.hex[2]
-sw[3] => Compx4:comp.compx4_in_b[3]
-sw[3] => SevenSegment:right_decoder.hex[3]
-sw[4] => Compx4:comp.compx4_in_a[0]
-sw[5] => Compx4:comp.compx4_in_a[1]
-sw[6] => Compx4:comp.compx4_in_a[2]
-sw[7] => Compx4:comp.compx4_in_a[3]
-leds[0] << <GND>
-leds[1] << <GND>
-leds[2] << <GND>
-leds[3] << <GND>
-leds[4] << <GND>
-leds[5] << <GND>
-leds[6] << <GND>
-leds[7] << bin_counter[23].DB_MAX_OUTPUT_PORT_TYPE
-seg7_data[0] << segment7_mux:output.DOUT[0]
-seg7_data[1] << segment7_mux:output.DOUT[1]
-seg7_data[2] << segment7_mux:output.DOUT[2]
-seg7_data[3] << segment7_mux:output.DOUT[3]
-seg7_data[4] << segment7_mux:output.DOUT[4]
-seg7_data[5] << segment7_mux:output.DOUT[5]
-seg7_data[6] << segment7_mux:output.DOUT[6]
-seg7_char1 << segment7_mux:output.DIG2
-seg7_char2 << segment7_mux:output.DIG1
+sw[0] => ~NO_FANOUT~
+sw[1] => ~NO_FANOUT~
+sw[2] => ~NO_FANOUT~
+sw[3] => ~NO_FANOUT~
+sw[4] => ~NO_FANOUT~
+sw[5] => ~NO_FANOUT~
+sw[6] => ~NO_FANOUT~
+sw[7] => ~NO_FANOUT~
+leds[0] << shift_register_8bit:shift_reg.output[0]
+leds[1] << shift_register_8bit:shift_reg.output[1]
+leds[2] << shift_register_8bit:shift_reg.output[2]
+leds[3] << shift_register_8bit:shift_reg.output[3]
+leds[4] << shift_register_8bit:shift_reg.output[4]
+leds[5] << shift_register_8bit:shift_reg.output[5]
+leds[6] << shift_register_8bit:shift_reg.output[6]
+leds[7] << shift_register_8bit:shift_reg.output[7]
+seg7_data[0] << seg7_data[0].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[1] << seg7_data[1].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[2] << seg7_data[2].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[3] << seg7_data[3].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[4] << seg7_data[4].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[5] << seg7_data[5].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[6] << seg7_data[6].DB_MAX_OUTPUT_PORT_TYPE
+seg7_char1 << seg7_char1.DB_MAX_OUTPUT_PORT_TYPE
+seg7_char2 << comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab4_top|Compx4:comp
-compx4_in_a[0] => Compx1:bit1.compx1_in_a
-compx4_in_a[1] => Compx1:bit2.compx1_in_a
-compx4_in_a[2] => Compx1:bit3.compx1_in_a
-compx4_in_a[3] => Compx1:bit4.compx1_in_a
-compx4_in_b[0] => Compx1:bit1.compx1_in_b
-compx4_in_b[1] => Compx1:bit2.compx1_in_b
-compx4_in_b[2] => Compx1:bit3.compx1_in_b
-compx4_in_b[3] => Compx1:bit4.compx1_in_b
-compx4_mag[0] <= Compx1:bit4.compx1_mag[0]
-compx4_mag[1] <= Compx1:bit4.compx1_mag[1]
-
-
-|LogicalStep_Lab4_top|Compx4:comp|Compx1:bit1
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_b => compx1_mag.IN1
-compx1_in_b => compx1_mag.IN0
-compx1_in_b => compx1_mag.IN1
-compx1_in_b => compx1_mag.IN1
-compx1_previous[0] => compx1_mag.IN1
-compx1_previous[0] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_mag[0] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
-compx1_mag[1] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|LogicalStep_Lab4_top|Compx4:comp|Compx1:bit2
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_b => compx1_mag.IN1
-compx1_in_b => compx1_mag.IN0
-compx1_in_b => compx1_mag.IN1
-compx1_in_b => compx1_mag.IN1
-compx1_previous[0] => compx1_mag.IN1
-compx1_previous[0] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_mag[0] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
-compx1_mag[1] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|LogicalStep_Lab4_top|Compx4:comp|Compx1:bit3
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_b => compx1_mag.IN1
-compx1_in_b => compx1_mag.IN0
-compx1_in_b => compx1_mag.IN1
-compx1_in_b => compx1_mag.IN1
-compx1_previous[0] => compx1_mag.IN1
-compx1_previous[0] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_mag[0] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
-compx1_mag[1] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|LogicalStep_Lab4_top|Compx4:comp|Compx1:bit4
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_a => compx1_mag.IN0
-compx1_in_b => compx1_mag.IN1
-compx1_in_b => compx1_mag.IN0
-compx1_in_b => compx1_mag.IN1
-compx1_in_b => compx1_mag.IN1
-compx1_previous[0] => compx1_mag.IN1
-compx1_previous[0] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_previous[1] => compx1_mag.IN1
-compx1_mag[0] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
-compx1_mag[1] <= compx1_mag.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|LogicalStep_Lab4_top|Moore_state_machine:state_machine
-clk => current_state~1.DATAIN
-reset => current_state~3.DATAIN
-comparison[0] => Equal0.IN1
-comparison[0] => Equal1.IN0
-comparison[1] => Equal0.IN0
-comparison[1] => Equal1.IN1
-output[0] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|LogicalStep_Lab4_top|SevenSegment:left_decoder
-hex[0] => Mux0.IN19
-hex[0] => Mux1.IN19
-hex[0] => Mux2.IN19
-hex[0] => Mux3.IN19
-hex[0] => Mux4.IN19
-hex[0] => Mux5.IN19
-hex[0] => Mux6.IN19
-hex[1] => Mux0.IN18
-hex[1] => Mux1.IN18
-hex[1] => Mux2.IN18
-hex[1] => Mux3.IN18
-hex[1] => Mux4.IN18
-hex[1] => Mux5.IN18
-hex[1] => Mux6.IN18
-hex[2] => Mux0.IN17
-hex[2] => Mux1.IN17
-hex[2] => Mux2.IN17
-hex[2] => Mux3.IN17
-hex[2] => Mux4.IN17
-hex[2] => Mux5.IN17
-hex[2] => Mux6.IN17
-hex[3] => Mux0.IN16
-hex[3] => Mux1.IN16
-hex[3] => Mux2.IN16
-hex[3] => Mux3.IN16
-hex[3] => Mux4.IN16
-hex[3] => Mux5.IN16
-hex[3] => Mux6.IN16
-sevenseg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|LogicalStep_Lab4_top|SevenSegment:right_decoder
-hex[0] => Mux0.IN19
-hex[0] => Mux1.IN19
-hex[0] => Mux2.IN19
-hex[0] => Mux3.IN19
-hex[0] => Mux4.IN19
-hex[0] => Mux5.IN19
-hex[0] => Mux6.IN19
-hex[1] => Mux0.IN18
-hex[1] => Mux1.IN18
-hex[1] => Mux2.IN18
-hex[1] => Mux3.IN18
-hex[1] => Mux4.IN18
-hex[1] => Mux5.IN18
-hex[1] => Mux6.IN18
-hex[2] => Mux0.IN17
-hex[2] => Mux1.IN17
-hex[2] => Mux2.IN17
-hex[2] => Mux3.IN17
-hex[2] => Mux4.IN17
-hex[2] => Mux5.IN17
-hex[2] => Mux6.IN17
-hex[3] => Mux0.IN16
-hex[3] => Mux1.IN16
-hex[3] => Mux2.IN16
-hex[3] => Mux3.IN16
-hex[3] => Mux4.IN16
-hex[3] => Mux5.IN16
-hex[3] => Mux6.IN16
-sevenseg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-sevenseg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|LogicalStep_Lab4_top|segment7_mux:output
-clk => \clk_proc:COUNT[0].CLK
-clk => \clk_proc:COUNT[1].CLK
-clk => \clk_proc:COUNT[2].CLK
-clk => \clk_proc:COUNT[3].CLK
-clk => \clk_proc:COUNT[4].CLK
-clk => \clk_proc:COUNT[5].CLK
-clk => \clk_proc:COUNT[6].CLK
-clk => \clk_proc:COUNT[7].CLK
-clk => \clk_proc:COUNT[8].CLK
-clk => \clk_proc:COUNT[9].CLK
-clk => \clk_proc:COUNT[10].CLK
-DIN2[0] => DOUT_TEMP.DATAB
-DIN2[1] => DOUT_TEMP[1].DATAB
-DIN2[2] => DOUT_TEMP.DATAB
-DIN2[3] => DOUT_TEMP.DATAB
-DIN2[4] => DOUT_TEMP.DATAB
-DIN2[5] => DOUT_TEMP[5].DATAB
-DIN2[6] => DOUT_TEMP[6].DATAB
-DIN1[0] => DOUT_TEMP.DATAA
-DIN1[1] => DOUT_TEMP[1].DATAA
-DIN1[2] => DOUT_TEMP.DATAA
-DIN1[3] => DOUT_TEMP.DATAA
-DIN1[4] => DOUT_TEMP.DATAA
-DIN1[5] => DOUT_TEMP[5].DATAA
-DIN1[6] => DOUT_TEMP[6].DATAA
-DOUT[0] <= DOUT_TEMP.DB_MAX_OUTPUT_PORT_TYPE
-DOUT[1] <= DOUT[1].DB_MAX_OUTPUT_PORT_TYPE
-DOUT[2] <= DOUT_TEMP.DB_MAX_OUTPUT_PORT_TYPE
-DOUT[3] <= DOUT_TEMP.DB_MAX_OUTPUT_PORT_TYPE
-DOUT[4] <= DOUT_TEMP.DB_MAX_OUTPUT_PORT_TYPE
-DOUT[5] <= DOUT[5].DB_MAX_OUTPUT_PORT_TYPE
-DOUT[6] <= DOUT[6].DB_MAX_OUTPUT_PORT_TYPE
-DIG2 <= \clk_proc:COUNT[10].DB_MAX_OUTPUT_PORT_TYPE
-DIG1 <= \clk_proc:COUNT[10].DB_MAX_OUTPUT_PORT_TYPE
+|LogicalStep_Lab4_top|shift_register_8bit:shift_reg
+clock => current_state[0].CLK
+clock => current_state[1].CLK
+clock => current_state[2].CLK
+clock => current_state[3].CLK
+clock => current_state[4].CLK
+clock => current_state[5].CLK
+clock => current_state[6].CLK
+clock => current_state[7].CLK
+shift_direction => current_state.OUTPUTSELECT
+shift_direction => current_state.OUTPUTSELECT
+shift_direction => current_state.OUTPUTSELECT
+shift_direction => current_state.OUTPUTSELECT
+shift_direction => current_state.OUTPUTSELECT
+shift_direction => current_state.OUTPUTSELECT
+shift_direction => current_state.OUTPUTSELECT
+shift_direction => current_state.OUTPUTSELECT
+reset => current_state[0].PRESET
+reset => current_state[1].ACLR
+reset => current_state[2].ACLR
+reset => current_state[3].ACLR
+reset => current_state[4].ACLR
+reset => current_state[5].ACLR
+reset => current_state[6].ACLR
+reset => current_state[7].ACLR
+output[0] <= current_state[0].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= current_state[1].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= current_state[2].DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= current_state[3].DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= current_state[4].DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= current_state[5].DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= current_state[6].DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= current_state[7].DB_MAX_OUTPUT_PORT_TYPE
 
 

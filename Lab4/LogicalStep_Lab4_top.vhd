@@ -53,6 +53,15 @@ component segment7_mux port (
 		 DIG1			: out	std_logic
 ); 
 end component;
+
+component shift_register_8bit is
+		port (
+			clock: in std_logic;
+			shift_direction: in std_logic;
+			reset: in std_logic;
+			output: out std_logic_vector(7 downto 0)
+      );
+end component;
 	
 ----------------------------------------------------------------------------------------------------
 	CONSTANT	SIM							:  boolean := FALSE; 	-- set to TRUE for simulation runs otherwise keep at 0.
@@ -69,7 +78,7 @@ end component;
 	
 	signal   current_state				: std_logic_vector(3 downto 0);
 	
-	signal seg7_a, seg7_b : std_logic_vector(6 downto 0);
+	signal 	seg7_a, seg7_b : std_logic_vector(6 downto 0);
 
 ----------------------------------------------------------------------------------------------------
 BEGIN
@@ -90,16 +99,22 @@ Clock_Source:
 					
 ---------------------------------------------------------------------------------------------------
 
-leds(7) <= Main_Clk;
+--leds(3) <= Main_Clk;
 
-comp : Compx4 port map (sw(7 downto 4), sw(3 downto 0), comparison);
+shift_reg : shift_register_8bit port map (Main_Clk, not pb(0), not pb(1), leds(7 downto 0));
 
-state_machine : Moore_state_machine port map (Main_Clk, '0', comparison, current_state);
+--comp : Compx4 port map (sw(3 downto 0), current_state, comparison);
+
+--state_machine : Moore_state_machine port map (Main_Clk, '0', comparison, current_state);
+
+--leds(2) <= not comparison(0) and not comparison(1);
+--leds(1) <= comparison(0) and comparison(1);
+--leds(0) <= comparison(0) and not comparison(1);
 
 -- Display the desired temp and current temp
-left_decoder: SevenSegment port map (current_state, seg7_b);
-right_decoder: SevenSegment port map (sw(3 downto 0), seg7_a);
+--left_decoder: SevenSegment port map (current_state, seg7_b);
+--right_decoder: SevenSegment port map (sw(3 downto 0), seg7_a);
 
-output : segment7_mux port map (clkin_50, seg7_b, seg7_a, seg7_data, seg7_char1, seg7_char2);
+--output : segment7_mux port map (clkin_50, seg7_b, seg7_a, seg7_data, seg7_char1, seg7_char2);
 
 END SimpleCircuit;

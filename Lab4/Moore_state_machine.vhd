@@ -51,7 +51,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S1;
 				-- Not a valid state just stay at s0
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S0;
 				-- Equal so do nothing
 				ELSE
@@ -63,7 +63,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S2;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S0;
 				-- Equal so do nothing
 				ELSE
@@ -75,7 +75,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S3;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S1;
 				-- Equal so do nothing
 				ELSE
@@ -87,7 +87,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S4;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S2;
 				-- Equal so do nothing
 				ELSE
@@ -99,7 +99,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S5;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S3;
 				-- Equal so do nothing
 				ELSE
@@ -111,7 +111,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S6;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S4;
 				-- Equal so do nothing
 				ELSE
@@ -123,7 +123,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S7;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S5;
 				-- Equal so do nothing
 				ELSE
@@ -135,7 +135,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S8;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S6;
 				-- Equal so do nothing
 				ELSE
@@ -147,7 +147,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S9;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S7;
 				-- Equal so do nothing
 				ELSE
@@ -159,8 +159,20 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S10;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S8;
+				-- Equal so do nothing
+				ELSE
+					next_state <= current_state;
+            END IF;	
+				
+			WHEN S10 =>
+				-- Smaller than increment
+            IF (comparison = "00") THEN 
+               next_state <= S11;
+				-- Bigger than so decrease
+            ELSIF (comparison = "01") then
+               next_state <= S9;
 				-- Equal so do nothing
 				ELSE
 					next_state <= current_state;
@@ -171,7 +183,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S12;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S10;
 				-- Equal so do nothing
 				ELSE
@@ -183,7 +195,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S13;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S11;
 				-- Equal so do nothing
 				ELSE
@@ -195,7 +207,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S14;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S12;
 				-- Equal so do nothing
 				ELSE
@@ -207,7 +219,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S15;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S13;
 				-- Equal so do nothing
 				ELSE
@@ -219,7 +231,7 @@ BEGIN
             IF (comparison = "00") THEN 
                next_state <= S15;
 				-- Bigger than so decrease
-            ELSIF (comparison = "10") then
+            ELSIF (comparison = "01") then
                next_state <= S14;
 				-- Equal so do nothing
 				ELSE
@@ -247,7 +259,7 @@ output <= "0000" when current_state = s0 else
 			 "1100" when current_state = s12 else 
 			 "1101" when current_state = s13 else 
 			 "1110" when current_state = s14 else 
-			 "1111";
+			 "1111" when current_state = s15;
 
 
 END ARCHITECTURE definition;
