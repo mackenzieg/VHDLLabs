@@ -7,6 +7,7 @@ use ieee.numeric_std.all;
 -- This is created as an entity so that it can be reused many times easily
 --
 
+
 entity SevenSegment is port (
    
    hex	   :  in  std_logic_vector(3 downto 0);   -- The 4 bit data to be displayed

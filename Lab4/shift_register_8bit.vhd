@@ -12,6 +12,7 @@ end entity;
 
 architecture definition of shift_register_8bit is 
 
+-- Signal of current state
 	signal current_state: std_logic_vector(7 downto 0);
 
 begin
@@ -20,12 +21,15 @@ shift: process (clock, reset) is begin
 	if (reset = '1') then
 		current_state <= "00000001";
 	elsif (rising_edge(clock)) then
+	-- shift right is direction is one
 		if (shift_direction = '1') then
 			current_state(7 downto 0) <= current_state(0) & current_state(7 downto 1);
 		else
+		-- shift left is direction is zero
 			current_state(7 downto 0) <= current_state(6 downto 0) & current_state(7);
 		end if;
 	end if;
+		-- set output to current state
 	output <= current_state;
 end process;
 
