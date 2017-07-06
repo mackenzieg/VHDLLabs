@@ -98,10 +98,6 @@
 				{
 					"name" : "pb[0]",
 					"strict" : false
-				},
-				{
-					"name" : "pb[1]",
-					"strict" : false
 				}
 			]
 		}

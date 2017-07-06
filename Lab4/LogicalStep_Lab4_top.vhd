@@ -102,7 +102,7 @@ Clock_Source:
 
 leds(3) <= Main_Clk;
 
-shift_reg : shift_register_4bit port map (Main_Clk, not pb(0), not pb(1), leds(7 downto 4));
+shift_reg : shift_register_4bit port map (Main_Clk, not pb(0), not rst_n, leds(7 downto 4));
 
 --simulation_shift_register : shift_register_4bit port map (Main_Clk, not pb(0), not rst_n, leds(3 downto 0));
 
