@@ -65,7 +65,7 @@ component shift_register_4bit is
 end component;
 
 ----------------------------------------------------------------------------------------------------
-	CONSTANT	SIM							:  boolean := TRUE; 	-- set to TRUE for simulation runs otherwise keep at 0.
+	CONSTANT	SIM							:  boolean := FALSE; 	-- set to TRUE for simulation runs otherwise keep at 0.
    CONSTANT CLK_DIV_SIZE				: 	INTEGER := 24;    -- size of vectors for the counters
 
    SIGNAL 	Main_CLK						:  STD_LOGIC; 			-- main clock to drive sequencing of State Machine
@@ -102,9 +102,7 @@ Clock_Source:
 
 leds(3) <= Main_Clk;
 
-shift_reg : shift_register_4bit port map (Main_Clk, not pb(0), not pb(1), leds(4 downto 0));
-
-shift_register: shift_register_4bit port map (Main_Clk, not pb(0), not rst_n, leds(7 downto 4));
+shift_reg : shift_register_4bit port map (Main_Clk, not pb(0), not pb(1), leds(7 downto 4));
 
 --simulation_shift_register : shift_register_4bit port map (Main_Clk, not pb(0), not rst_n, leds(3 downto 0));
 
@@ -118,7 +116,7 @@ leds(2) <= not comparison(0) and not comparison(1);
 leds(1) <= comparison(0) and comparison(1);
 leds(0) <= comparison(0) and not comparison(1);
 
-Display the desired temp and current temp
+--Display the desired temp and current temp
 left_decoder: SevenSegment port map (current_state, seg7_b);
 right_decoder: SevenSegment port map (sw(3 downto 0), seg7_a);
 
