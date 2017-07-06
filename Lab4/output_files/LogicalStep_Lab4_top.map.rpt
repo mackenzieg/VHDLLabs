@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LogicalStep_Lab4_top
-Wed Jul 05 12:14:56 2017
+Thu Jul 06 17:15:18 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -13,14 +13,11 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |LogicalStep_Lab4_top|Moore_state_machine:state_machine|current_state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Port Connectivity Checks: "Compx4:comp|Compx1:bit1"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -47,15 +44,15 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 05 12:14:56 2017           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 06 17:15:17 2017           ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
 ; Revision Name                      ; LogicalStep_Lab4_top                            ;
 ; Top-level Entity Name              ; LogicalStep_Lab4_top                            ;
 ; Family                             ; MAX 10                                          ;
-; Total logic elements               ; 115                                             ;
-;     Total combinational functions  ; 115                                             ;
-;     Dedicated logic registers      ; 44                                              ;
-; Total registers                    ; 44                                              ;
+; Total logic elements               ; 4                                               ;
+;     Total combinational functions  ; 4                                               ;
+;     Dedicated logic registers      ; 4                                               ;
+; Total registers                    ; 4                                               ;
 ; Total pins                         ; 31                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -175,109 +172,52 @@ agreement for further details.
 +----------------------------------+-----------------+-----------------+---------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path          ; Library ;
 +----------------------------------+-----------------+-----------------+---------------------------------------+---------+
-; SevenSegment.vhd                 ; yes             ; User VHDL File  ; N:/VHDL/Lab4/SevenSegment.vhd         ;         ;
-; segment7_mux.vhd                 ; yes             ; User VHDL File  ; N:/VHDL/Lab4/segment7_mux.vhd         ;         ;
-; Compx4.vhd                       ; yes             ; User VHDL File  ; N:/VHDL/Lab4/Compx4.vhd               ;         ;
-; Compx1.vhd                       ; yes             ; User VHDL File  ; N:/VHDL/Lab4/Compx1.vhd               ;         ;
 ; LogicalStep_Lab4_top.vhd         ; yes             ; User VHDL File  ; N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd ;         ;
-; Moore_state_machine.vhd          ; yes             ; User VHDL File  ; N:/VHDL/Lab4/Moore_state_machine.vhd  ;         ;
 ; shift_register_4bit.vhd          ; yes             ; User VHDL File  ; N:/VHDL/Lab4/shift_register_4bit.vhd  ;         ;
 +----------------------------------+-----------------+-----------------+---------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 115            ;
-;                                             ;                ;
-; Total combinational functions               ; 115            ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 45             ;
-;     -- 3 input functions                    ; 36             ;
-;     -- <=2 input functions                  ; 34             ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 84             ;
-;     -- arithmetic mode                      ; 31             ;
-;                                             ;                ;
-; Total registers                             ; 44             ;
-;     -- Dedicated logic registers            ; 44             ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 31             ;
-;                                             ;                ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; clkin_50~input ;
-; Maximum fan-out                             ; 24             ;
-; Total fan-out                               ; 509            ;
-; Average fan-out                             ; 2.30           ;
-+---------------------------------------------+----------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 4           ;
+;                                             ;             ;
+; Total combinational functions               ; 4           ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 0           ;
+;     -- 3 input functions                    ; 4           ;
+;     -- <=2 input functions                  ; 0           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 4           ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 4           ;
+;     -- Dedicated logic registers            ; 4           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 31          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; pb[0]~input ;
+; Maximum fan-out                             ; 4           ;
+; Total fan-out                               ; 59          ;
+; Average fan-out                             ; 0.84        ;
++---------------------------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
-+-----------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+--------------+
-; Compilation Hierarchy Node              ; LC Combinationals ; LC Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                      ; Library Name ;
-+-----------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+--------------+
-; |LogicalStep_Lab4_top                   ; 115 (27)          ; 44 (23)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 31   ; 0            ; 0          ; |LogicalStep_Lab4_top                                    ; work         ;
-;    |Compx4:comp|                        ; 5 (0)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab4_top|Compx4:comp                        ; work         ;
-;       |Compx1:bit3|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab4_top|Compx4:comp|Compx1:bit3            ; work         ;
-;       |Compx1:bit4|                     ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab4_top|Compx4:comp|Compx1:bit4            ; work         ;
-;    |Moore_state_machine:state_machine|  ; 48 (48)           ; 16 (16)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab4_top|Moore_state_machine:state_machine  ; work         ;
-;    |SevenSegment:left_decoder|          ; 7 (7)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab4_top|SevenSegment:left_decoder          ; work         ;
-;    |SevenSegment:right_decoder|         ; 7 (7)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab4_top|SevenSegment:right_decoder         ; work         ;
-;    |segment7_mux:output|                ; 17 (17)           ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab4_top|segment7_mux:output                ; work         ;
-;    |shift_register_4bit:shift_register| ; 4 (4)             ; 4 (4)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab4_top|shift_register_4bit:shift_register ; work         ;
-+-----------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
++----------------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                 ; Library Name ;
++----------------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------+--------------+
+; |LogicalStep_Lab4_top                              ; 4 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 31   ; 0            ; 0          ; |LogicalStep_Lab4_top                                               ; work         ;
+;    |shift_register_4bit:simulation_shift_register| ; 4 (4)             ; 4 (4)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab4_top|shift_register_4bit:simulation_shift_register ; work         ;
++----------------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |LogicalStep_Lab4_top|Moore_state_machine:state_machine|current_state                                                                                                                                                                                                                                                   ;
-+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
-; Name              ; current_state.s15 ; current_state.S14 ; current_state.S13 ; current_state.S12 ; current_state.S11 ; current_state.S10 ; current_state.S9 ; current_state.S8 ; current_state.S7 ; current_state.S6 ; current_state.S5 ; current_state.S4 ; current_state.S3 ; current_state.S2 ; current_state.S1 ; current_state.S0 ;
-+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
-; current_state.S0  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ;
-; current_state.S1  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 1                ;
-; current_state.S2  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 1                ;
-; current_state.S3  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 1                ;
-; current_state.S4  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S5  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S6  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S7  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S8  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S9  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S10 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S11 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S12 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S13 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S14 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.s15 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
-
-
-+----------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                           ;
-+----------------------------------------+-----------------------------------------------------+
-; Register name                          ; Reason for Removal                                  ;
-+----------------------------------------+-----------------------------------------------------+
-; segment7_mux:output|\clk_proc:COUNT[0] ; Merged with bin_counter[0]                          ;
-; segment7_mux:output|\clk_proc:COUNT[1] ; Merged with bin_counter[1]                          ;
-; segment7_mux:output|\clk_proc:COUNT[2] ; Merged with bin_counter[2]                          ;
-; segment7_mux:output|\clk_proc:COUNT[3] ; Merged with bin_counter[3]                          ;
-; segment7_mux:output|\clk_proc:COUNT[4] ; Merged with bin_counter[4]                          ;
-; segment7_mux:output|\clk_proc:COUNT[5] ; Merged with bin_counter[5]                          ;
-; segment7_mux:output|\clk_proc:COUNT[6] ; Merged with bin_counter[6]                          ;
-; segment7_mux:output|\clk_proc:COUNT[7] ; Merged with bin_counter[7]                          ;
-; segment7_mux:output|\clk_proc:COUNT[8] ; Merged with bin_counter[8]                          ;
-; segment7_mux:output|\clk_proc:COUNT[9] ; Merged with bin_counter[9]                          ;
-; bin_counter[10]                        ; Merged with segment7_mux:output|\clk_proc:COUNT[10] ;
-; Total Number of Removed Registers = 11 ;                                                     ;
-+----------------------------------------+-----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -285,33 +225,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 44    ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 20    ;
+; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------+
-; Inverted Register Statistics                                  ;
-+-----------------------------------------------------+---------+
-; Inverted Register                                   ; Fan out ;
-+-----------------------------------------------------+---------+
-; shift_register_4bit:shift_register|current_state[0] ; 3       ;
-; Total number of inverted registers = 1              ;         ;
-+-----------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Port Connectivity Checks: "Compx4:comp|Compx1:bit1" ;
-+-----------------+-------+----------+----------------+
-; Port            ; Type  ; Severity ; Details        ;
-+-----------------+-------+----------+----------------+
-; compx1_previous ; Input ; Info     ; Stuck at VCC   ;
-+-----------------+-------+----------+----------------+
++--------------------------------------------------------------------------+
+; Inverted Register Statistics                                             ;
++----------------------------------------------------------------+---------+
+; Inverted Register                                              ; Fan out ;
++----------------------------------------------------------------+---------+
+; shift_register_4bit:simulation_shift_register|current_state[0] ; 3       ;
+; Total number of inverted registers = 1                         ;         ;
++----------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -320,22 +251,16 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 31                          ;
-; cycloneiii_ff         ; 44                          ;
-;     CLR               ; 20                          ;
-;     plain             ; 24                          ;
-; cycloneiii_io_obuf    ; 3                           ;
-; cycloneiii_lcell_comb ; 120                         ;
-;     arith             ; 31                          ;
-;         2 data inputs ; 29                          ;
-;         3 data inputs ; 2                           ;
-;     normal            ; 89                          ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 34                          ;
-;         4 data inputs ; 45                          ;
+; cycloneiii_ff         ; 4                           ;
+;     CLR               ; 4                           ;
+; cycloneiii_lcell_comb ; 6                           ;
+;     normal            ; 6                           ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         3 data inputs ; 4                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 4.38                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -344,7 +269,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -354,15 +279,15 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
-    Info: Processing started: Wed Jul 05 12:14:15 2017
+    Info: Processing started: Thu Jul 06 17:14:41 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LogicalStep_Lab4 -c LogicalStep_Lab4_top
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file sm_example.vhd
     Info (12022): Found design unit 1: Moore_SM_Example-MSM File: N:/VHDL/Lab4/SM_Example.vhd Line: 14
     Info (12023): Found entity 1: Moore_SM_Example File: N:/VHDL/Lab4/SM_Example.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file sevensegment.vhd
-    Info (12022): Found design unit 1: SevenSegment-Behavioral File: N:/VHDL/Lab4/SevenSegment.vhd Line: 18
-    Info (12023): Found entity 1: SevenSegment File: N:/VHDL/Lab4/SevenSegment.vhd Line: 10
+    Info (12022): Found design unit 1: SevenSegment-Behavioral File: N:/VHDL/Lab4/SevenSegment.vhd Line: 19
+    Info (12023): Found entity 1: SevenSegment File: N:/VHDL/Lab4/SevenSegment.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file segment7_mux.vhd
     Info (12022): Found design unit 1: segment7_mux-syn File: N:/VHDL/Lab4/segment7_mux.vhd Line: 67
     Info (12023): Found entity 1: segment7_mux File: N:/VHDL/Lab4/segment7_mux.vhd Line: 52
@@ -391,71 +316,51 @@ Info (12021): Found 2 design units, including 1 entities, in source file shift_r
     Info (12022): Found design unit 1: shift_register_8bit-definition File: N:/VHDL/Lab4/shift_register_8bit.vhd Line: 13
     Info (12023): Found entity 1: shift_register_8bit File: N:/VHDL/Lab4/shift_register_8bit.vhd Line: 5
 Info (12127): Elaborating entity "LogicalStep_Lab4_top" for the top level hierarchy
-Info (12128): Elaborating entity "shift_register_4bit" for hierarchy "shift_register_4bit:shift_register" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 115
+Warning (10541): VHDL Signal Declaration warning at LogicalStep_Lab4_top.vhd(14): used implicit default value for signal "seg7_data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 14
+Warning (10541): VHDL Signal Declaration warning at LogicalStep_Lab4_top.vhd(15): used implicit default value for signal "seg7_char1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 15
+Warning (10541): VHDL Signal Declaration warning at LogicalStep_Lab4_top.vhd(16): used implicit default value for signal "seg7_char2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 16
+Warning (10873): Using initial value X (don't care) for net "leds[7..4]" at LogicalStep_Lab4_top.vhd(13) File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 13
+Info (12128): Elaborating entity "shift_register_4bit" for hierarchy "shift_register_4bit:simulation_shift_register" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 109
 Warning (10492): VHDL Process Statement warning at shift_register_4bit.vhd(34): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/shift_register_4bit.vhd Line: 34
-Info (12128): Elaborating entity "Compx4" for hierarchy "Compx4:comp" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 117
-Info (12128): Elaborating entity "Compx1" for hierarchy "Compx4:comp|Compx1:bit1" File: N:/VHDL/Lab4/Compx4.vhd Line: 34
-Info (12128): Elaborating entity "Moore_state_machine" for hierarchy "Moore_state_machine:state_machine" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 119
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(31): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 31
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(51): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 51
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(54): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 54
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(63): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(66): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 66
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(75): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 75
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(78): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 78
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(87): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(90): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 90
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(99): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 99
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(102): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 102
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(111): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 111
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(114): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 114
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(123): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 123
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(126): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(135): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(138): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 138
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(147): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(150): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 150
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(159): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 159
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(162): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 162
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(171): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 171
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(174): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 174
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(183): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 183
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(186): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 186
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(195): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 195
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(198): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 198
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(207): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 207
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(210): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 210
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(219): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 219
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(222): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 222
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(231): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 231
-Warning (10492): VHDL Process Statement warning at Moore_state_machine.vhd(234): signal "comparison" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 234
-Info (10041): Inferred latch for "output[0]" at Moore_state_machine.vhd(247) File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 247
-Info (10041): Inferred latch for "output[1]" at Moore_state_machine.vhd(247) File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 247
-Info (10041): Inferred latch for "output[2]" at Moore_state_machine.vhd(247) File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 247
-Info (10041): Inferred latch for "output[3]" at Moore_state_machine.vhd(247) File: N:/VHDL/Lab4/Moore_state_machine.vhd Line: 247
-Info (12128): Elaborating entity "SevenSegment" for hierarchy "SevenSegment:left_decoder" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 126
-Info (12128): Elaborating entity "segment7_mux" for hierarchy "segment7_mux:output" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 129
 Info (13000): Registers with preset signals will power-up high File: N:/VHDL/Lab4/shift_register_4bit.vhd Line: 22
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "leds[4]" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 13
+    Warning (13410): Pin "leds[5]" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 13
+    Warning (13410): Pin "leds[6]" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 13
+    Warning (13410): Pin "leds[7]" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 13
+    Warning (13410): Pin "seg7_data[0]" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 14
+    Warning (13410): Pin "seg7_data[1]" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 14
+    Warning (13410): Pin "seg7_data[2]" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 14
+    Warning (13410): Pin "seg7_data[3]" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 14
+    Warning (13410): Pin "seg7_data[4]" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 14
+    Warning (13410): Pin "seg7_data[5]" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 14
+    Warning (13410): Pin "seg7_data[6]" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 14
+    Warning (13410): Pin "seg7_char1" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 15
+    Warning (13410): Pin "seg7_char2" is stuck at GND File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 16
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "pb[1]" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 11
     Warning (15610): No output dependent on input pin "pb[2]" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 11
     Warning (15610): No output dependent on input pin "pb[3]" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 11
+    Warning (15610): No output dependent on input pin "sw[0]" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 12
+    Warning (15610): No output dependent on input pin "sw[1]" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 12
+    Warning (15610): No output dependent on input pin "sw[2]" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 12
+    Warning (15610): No output dependent on input pin "sw[3]" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 12
     Warning (15610): No output dependent on input pin "sw[4]" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 12
     Warning (15610): No output dependent on input pin "sw[5]" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 12
     Warning (15610): No output dependent on input pin "sw[6]" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 12
     Warning (15610): No output dependent on input pin "sw[7]" File: N:/VHDL/Lab4/LogicalStep_Lab4_top.vhd Line: 12
-Info (21057): Implemented 146 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 115 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 857 megabytes
-    Info: Processing ended: Wed Jul 05 12:14:57 2017
-    Info: Elapsed time: 00:00:42
+    Info (21061): Implemented 4 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 858 megabytes
+    Info: Processing ended: Thu Jul 06 17:15:18 2017
+    Info: Elapsed time: 00:00:37
     Info: Total CPU time (on all processors): 00:00:58
 
 
