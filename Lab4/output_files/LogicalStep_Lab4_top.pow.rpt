@@ -1,5 +1,5 @@
 PowerPlay Power Analyzer report for LogicalStep_Lab4_top
-Thu Jul 06 18:00:22 2017
+Thu Jul 06 18:09:54 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -53,19 +53,19 @@ agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.17        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ; < 0.1%      ;
+;     Processor 2            ;  16.7%      ;
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; PowerPlay Power Analyzer Summary                                                          ;
 +----------------------------------------+--------------------------------------------------+
-; PowerPlay Power Analyzer Status        ; Successful - Thu Jul 06 18:00:22 2017            ;
+; PowerPlay Power Analyzer Status        ; Successful - Thu Jul 06 18:09:54 2017            ;
 ; Quartus Prime Version                  ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition  ;
 ; Revision Name                          ; LogicalStep_Lab4_top                             ;
 ; Top-level Entity Name                  ; LogicalStep_Lab4_top                             ;
@@ -111,6 +111,7 @@ agreement for further details.
 +-------------------------+-----------------------------+
 ; Node                    ; Reason                      ;
 +-------------------------+-----------------------------+
+; pb[1]                   ; No valid clock domain found ;
 ; pb[2]                   ; No valid clock domain found ;
 ; pb[3]                   ; No valid clock domain found ;
 ; sw[4]                   ; No valid clock domain found ;
@@ -124,7 +125,6 @@ agreement for further details.
 ; rst_n                   ; No valid clock domain found ;
 ; clkin_50                ; No valid clock domain found ;
 ; pb[0]                   ; No valid clock domain found ;
-; pb[1]                   ; No valid clock domain found ;
 ; clkin_50~inputclkctrl   ; No valid clock domain found ;
 ; bin_counter[23]~clkctrl ; No valid clock domain found ;
 +-------------------------+-----------------------------+
@@ -261,16 +261,16 @@ agreement for further details.
 ;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 2 (0.8%)    ; 0 (0.0%)   ; 0 (0.0%)    ; 2 (1.2%)      ;
 ;                                                                                        ;             ;            ;             ;               ;
 ; Vectorless estimation                                                                  ;             ;            ;             ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 229 (93.9%) ; 20 (57.1%) ; 44 (100.0%) ; 165 (100.0%)  ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 17 (7.0%)   ; 1 (2.9%)   ; 0 (0.0%)    ; 16 (9.7%)     ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 227 (93.0%) ; 20 (57.1%) ; 44 (100.0%) ; 163 (98.8%)   ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 227 (93.4%) ; 19 (54.3%) ; 44 (100.0%) ; 164 (100.0%)  ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 17 (7.0%)   ; 1 (2.9%)   ; 0 (0.0%)    ; 16 (9.8%)     ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 225 (92.6%) ; 19 (54.3%) ; 44 (100.0%) ; 162 (98.8%)   ;
 ;                                                                                        ;             ;            ;             ;               ;
 ; Default assignment                                                                     ;             ;            ;             ;               ;
 ;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)    ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 15 (6.1%)   ; 15 (42.9%) ; 0 (0.0%)    ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 16 (6.6%)   ; 16 (45.7%) ; 0 (0.0%)    ; 0 (0.0%)      ;
 ;                                                                                        ;             ;            ;             ;               ;
 ; Assumed 0                                                                              ;             ;            ;             ;               ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 15 (6.1%)   ; 15 (42.9%) ; 0 (0.0%)    ; 0 (0.0%)      ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 16 (6.6%)   ; 16 (45.7%) ; 0 (0.0%)    ; 0 (0.0%)      ;
 +----------------------------------------------------------------------------------------+-------------+------------+-------------+---------------+
 
 
@@ -288,7 +288,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime PowerPlay Power Analyzer
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
-    Info: Processing started: Thu Jul 06 18:00:14 2017
+    Info: Processing started: Thu Jul 06 18:09:47 2017
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off LogicalStep_Lab4 -c LogicalStep_Lab4_top
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -296,7 +296,7 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'Log
 Warning (332060): Node: clkin_50 was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register bin_counter[23] is being clocked by clkin_50
 Warning (332060): Node: bin_counter[23] was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register Moore_state_machine:state_machine|current_state.S9 is being clocked by bin_counter[23]
+    Info (13166): Register Moore_state_machine:state_machine|current_state.S1 is being clocked by bin_counter[23]
 Warning (332068): No clocks defined in design.
 Info (223000): Starting Vectorless Power Activity Estimation
 Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
@@ -307,9 +307,9 @@ Info (334004): Delay annotation completed successfully
 Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
 Info (215031): Total thermal power estimate for the design is 159.83 mW
 Info: Quartus Prime PowerPlay Power Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 853 megabytes
-    Info: Processing ended: Thu Jul 06 18:00:22 2017
+    Info: Peak virtual memory: 854 megabytes
+    Info: Processing ended: Thu Jul 06 18:09:55 2017
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 
 
