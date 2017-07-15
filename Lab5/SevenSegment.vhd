@@ -25,9 +25,9 @@ architecture Behavioral of SevenSegment is
 begin
    with input select						     --GFEDCBA        3210      -- data in   
 	sevenseg <= 
-										 "0000001" when "001",
-										 "0001000" when "010",
-										 "1000000" when "100",
+										 "0001000" when "001",
+										 "1000000" when "010",
+										 "0000001" when "100",
 										 "0000000" when others;
 end architecture Behavioral; 
 ----------------------------------------------------------------------
