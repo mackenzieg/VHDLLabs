@@ -2,38 +2,50 @@
 clkin_50 => cycle_generator:GEN1.clkin
 clkin_50 => cycle_generator:GEN2.clkin
 clkin_50 => segment7_mux:Display_driver.clk
+clkin_50 => Synchronizer:ns_sync.clk
+clkin_50 => Synchronizer:ew_sync.clk
+clkin_50 => Latch_Saver:ns_latch.clk
+clkin_50 => Latch_Saver:ew_latch.clk
+clkin_50 => Synchronizer:night_mode_sync.clk
+clkin_50 => Synchronizer:reduced_mode_sync.clk
 rst_n => cycle_generator:GEN1.rst_n
 rst_n => cycle_generator:GEN2.rst_n
 rst_n => Moore_state:state_machine.reset
-pb[0] => ~NO_FANOUT~
-pb[1] => ~NO_FANOUT~
+rst_n => Synchronizer:ns_sync.reset
+rst_n => Synchronizer:ew_sync.reset
+rst_n => Latch_Saver:ns_latch.reset
+rst_n => Latch_Saver:ew_latch.reset
+rst_n => Synchronizer:night_mode_sync.reset
+rst_n => Synchronizer:reduced_mode_sync.reset
+pb[0] => Synchronizer:ns_sync.input
+pb[1] => Synchronizer:ew_sync.input
 pb[2] => ~NO_FANOUT~
 pb[3] => ~NO_FANOUT~
-sw[0] => ~NO_FANOUT~
-sw[1] => ~NO_FANOUT~
+sw[0] => Synchronizer:night_mode_sync.input
+sw[1] => Synchronizer:reduced_mode_sync.input
 sw[2] => ~NO_FANOUT~
 sw[3] => ~NO_FANOUT~
 sw[4] => ~NO_FANOUT~
 sw[5] => ~NO_FANOUT~
 sw[6] => ~NO_FANOUT~
 sw[7] => ~NO_FANOUT~
-leds[0] << cycle_generator:GEN2.strobe_out
-leds[1] << cycle_generator:GEN1.strobe_out
-leds[2] << <GND>
-leds[3] << <GND>
-leds[4] << <GND>
-leds[5] << left_input[0].DB_MAX_OUTPUT_PORT_TYPE
-leds[6] << left_input[1].DB_MAX_OUTPUT_PORT_TYPE
-leds[7] << left_input[2].DB_MAX_OUTPUT_PORT_TYPE
-seg7_data[0] << segment7_mux:Display_driver.DOUT[0]
-seg7_data[1] << segment7_mux:Display_driver.DOUT[1]
-seg7_data[2] << segment7_mux:Display_driver.DOUT[2]
-seg7_data[3] << segment7_mux:Display_driver.DOUT[3]
-seg7_data[4] << segment7_mux:Display_driver.DOUT[4]
-seg7_data[5] << segment7_mux:Display_driver.DOUT[5]
-seg7_data[6] << segment7_mux:Display_driver.DOUT[6]
-seg7_char1 << segment7_mux:Display_driver.DIG2
-seg7_char2 << segment7_mux:Display_driver.DIG1
+leds[0] <= cycle_generator:GEN2.strobe_out
+leds[1] <= cycle_generator:GEN1.strobe_out
+leds[2] <= Moore_state:state_machine.state_number[0]
+leds[3] <= Moore_state:state_machine.state_number[1]
+leds[4] <= Moore_state:state_machine.state_number[2]
+leds[5] <= Moore_state:state_machine.state_number[3]
+leds[6] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[7] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[0] <= segment7_mux:Display_driver.DOUT[0]
+seg7_data[1] <= segment7_mux:Display_driver.DOUT[1]
+seg7_data[2] <= segment7_mux:Display_driver.DOUT[2]
+seg7_data[3] <= segment7_mux:Display_driver.DOUT[3]
+seg7_data[4] <= segment7_mux:Display_driver.DOUT[4]
+seg7_data[5] <= segment7_mux:Display_driver.DOUT[5]
+seg7_data[6] <= segment7_mux:Display_driver.DOUT[6]
+seg7_char1 <= segment7_mux:Display_driver.DIG2
+seg7_char2 <= segment7_mux:Display_driver.DIG1
 
 
 |LogicalStep_Lab5_top|cycle_generator:GEN1
@@ -392,17 +404,102 @@ DIG1 <= \clk_proc:COUNT[10].DB_MAX_OUTPUT_PORT_TYPE
 |LogicalStep_Lab5_top|Moore_state:state_machine
 clk => current_state~1.DATAIN
 reset => current_state~3.DATAIN
+vehicle_ns => Selector1.IN4
+vehicle_ns => next_state.S9.DATAB
+vehicle_ns => next_state.S10.DATAB
+vehicle_ns => next_state.S11.DATAB
+vehicle_ns => next_state.S12.DATAB
+vehicle_ns => next_state.S13.DATAB
+vehicle_ew => Selector0.IN6
+vehicle_ew => next_state.S1.DATAB
+vehicle_ew => next_state.S2.DATAB
+vehicle_ew => next_state.S3.DATAB
+vehicle_ew => next_state.S4.DATAB
+vehicle_ew => next_state.S5.DATAB
+night_mode => next_state.DATAA
+night_mode => Transition_Section.IN0
+night_mode => Transition_Section.IN0
+night_mode => next_state.DATAA
+night_mode => Transition_Section.IN0
+night_mode => Transition_Section.IN0
+safe_mode => next_state.OUTPUTSELECT
+safe_mode => next_state.OUTPUTSELECT
+safe_mode => Transition_Section.IN1
+safe_mode => Transition_Section.IN1
+safe_mode => Selector2.IN5
+safe_mode => Transition_Section.IN1
+safe_mode => Transition_Section.IN1
+latch_clear_ns <= latch_clear_ns.DB_MAX_OUTPUT_PORT_TYPE
+latch_clear_ew <= latch_clear_ew.DB_MAX_OUTPUT_PORT_TYPE
 north_south[0] <= north_south[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
 north_south[1] <= north_south[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 north_south[2] <= <GND>
 north_south[3] <= north_south[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-north_south[4] <= <GND>
+north_south[4] <= north_south[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
 north_south[5] <= north_south[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
 east_west[0] <= east_west[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
 east_west[1] <= east_west[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-east_west[2] <= <GND>
+east_west[2] <= east_west[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 east_west[3] <= east_west[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
 east_west[4] <= <GND>
 east_west[5] <= east_west[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+state_number[0] <= state_number[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+state_number[1] <= state_number[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+state_number[2] <= state_number[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+state_number[3] <= state_number[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab5_top|Synchronizer:ns_sync
+clk => output.CLK
+clk => intern.CLK
+reset => output.ACLR
+reset => intern.ACLR
+input => intern.DATAIN
+data_out <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab5_top|Synchronizer:ew_sync
+clk => output.CLK
+clk => intern.CLK
+reset => output.ACLR
+reset => intern.ACLR
+input => intern.DATAIN
+data_out <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab5_top|Latch_Saver:ns_latch
+clk => output.CLK
+reset => output.ACLR
+latch => output.IN1
+sync => output.IN1
+enable => output.ENA
+data_out <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab5_top|Latch_Saver:ew_latch
+clk => output.CLK
+reset => output.ACLR
+latch => output.IN1
+sync => output.IN1
+enable => output.ENA
+data_out <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab5_top|Synchronizer:night_mode_sync
+clk => output.CLK
+clk => intern.CLK
+reset => output.ACLR
+reset => intern.ACLR
+input => intern.DATAIN
+data_out <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab5_top|Synchronizer:reduced_mode_sync
+clk => output.CLK
+clk => intern.CLK
+reset => output.ACLR
+reset => intern.ACLR
+input => intern.DATAIN
+data_out <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 

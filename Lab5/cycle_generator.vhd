@@ -70,5 +70,5 @@ CLKEN_GEN: PROCESS(clkin, rst_n, strobe, terminal_count) IS				-- full_cycle is 
 		end if;
 	END PROCESS;
 
-	END Architecture;
+END Architecture;
 

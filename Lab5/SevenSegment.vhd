@@ -8,6 +8,7 @@ use ieee.numeric_std.all;
 --
 
 
+-- 001 is green, 010 is yellow, 100 is red
 entity SevenSegment is port (
 
 	input		:  in std_logic_vector(2 downto 0); -- bit 3 is red, 1 is green
